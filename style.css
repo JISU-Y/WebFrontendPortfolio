@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+/* :root {
+} */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.section {
+  padding: 50px;
+  margin: auto;
+}
+
+.section h1 {
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+.line {
+  height: 2px;
+  width: 100px;
+  background-color: #fff;
+  margin: 10px 0;
+}
+
+/* HOME */
+.home {
+  height: 100vh;
+  background-color: #008080;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home h1 {
+  margin-bottom: 20px;
+}
+
+.home h3 {
+  margin: 10px 0;
+}
+
+.home .btn-start {
+  border-top: 50px solid red;
+  border-bottom: 50px solid none;
+  border-right: 50px solid transparent;
+  border-left: 50px solid transparent;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.home .btn-start:focus {
+  outline: none;
+}
+
+.home .line {
+  width: 300px;
+}
+
+/* MAIN */
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+.main h3 {
+  margin-bottom: 10px;
+}
+
+.main p {
+  margin-bottom: 10px;
+}
+
+.main .btn-resume {
+  background-color: #fff;
+  color: #0d98ba;
+  width: 120px;
+  height: 40px;
+  border: 2px solid #0d98ba;
+  border-radius: 1px;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.main .btn-resume:hover {
+  background-color: #0d98ba;
+  color: #fff;
+}
+
+.main .preview {
+  display: flex;
+  width: 100%;
+  height: 200px;
+  cursor: pointer;
+}
+
+.main .preview .preview-skills,
+.main .preview .preview-projects,
+.main .preview .preview-contacts {
+  width: 30%;
+  text-align: center;
+  line-height: 200px;
+}
+
+.main .preview .preview-skills:hover {
+  /* preview 이미지 및 밝이 어둡게 */
+}
