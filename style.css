@@ -73,6 +73,7 @@ body {
 .main {
   display: flex;
   flex-direction: column;
+  height: 100vh;
 }
 
 .main-container {
@@ -80,13 +81,16 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 100vh;
 }
 
 .main .main-container .details {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 700px;
+  width: 100%;
+  height: 50%;
   background-color: aquamarine;
   padding: 25px 50px;
 }
@@ -120,9 +124,10 @@ body {
 
 .main .main-container .preview {
   display: flex;
-  width: 99%;
-  height: 200px;
-  max-width: 1200px;
+  width: 100%;
+  height: 50%;
+  /* max-width: 1200px; */
+  /* 작아지면 height 30?으로 바꾸기?? */
   cursor: pointer;
   margin: 20px 0;
 }
@@ -137,6 +142,111 @@ body {
   margin: 3px;
 }
 
-.main-container .preview .preview-skills:hover {
+.main-container .preview .preview-skills:hover,
+.main-container .preview .preview-projects:hover,
+.main-container .preview .preview-contacts:hover {
   /* preview 이미지 및 밝이 어둡게 */
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Skills */
+.skills p {
+  margin-bottom: 20px;
+}
+
+.skills-container {
+  display: flex;
+}
+
+.skill-card {
+  background-color: brown;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 300px;
+  height: 300px;
+  max-width: 1200px;
+  color: blueviolet;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.skill-card i {
+  font-size: 70px;
+}
+
+/* Projects */
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.projects-container .project-categories {
+  width: 100%;
+}
+
+.projects-container .project-categories .category-btn {
+  width: 33%;
+  height: 40px;
+  cursor: pointer;
+  border: none;
+  padding: 5px 20px;
+  background-color: cadetblue;
+  font-size: 15px;
+}
+
+.projects-container .project-list {
+  display: flex;
+}
+
+/* Contact */
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-container .contact-info {
+  background-color: cornflowerblue;
+  display: flex;
+  width: 600px;
+  height: 350px;
+  border-radius: 10px;
+  margin-bottom: 50px;
+  margin-top: 30px;
+  position: relative;
+}
+
+.contact-container .contact-info h3 {
+  margin-right: auto;
+  position: absolute;
+  top: -30px;
+  left: 15px;
+}
+
+.contact-container .contact-info .info-left {
+  width: 45%;
+  height: 100%;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.contact-container .contact-info .info-right {
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 50px;
+}
+
+.contact-container .contact-links {
+  font-size: 50px;
+  margin: 10px;
 }
