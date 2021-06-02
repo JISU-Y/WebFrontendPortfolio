@@ -202,6 +202,11 @@ body {
   font-size: 70px;
 }
 
+.skill-card .fa-html5:hover {
+  background-color: antiquewhite;
+  color: #333;
+}
+
 /* Projects */
 .projects-container {
   display: flex;
@@ -227,10 +232,34 @@ body {
 
 .projects-container .project-list {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+  width: 100%;
+}
+
+.projects-container .project-list .project-title {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.projects-container .project-list .project-results {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: 50px;
+}
+
+.project-list .project-results img {
+  width: 200px;
+  height: 270px;
+  margin: 0 40px;
 }
 
 /* Contact */
-
+/* 명함이 탁 나오는 그런 애니메이션 구현? */
 .contact-container {
   display: flex;
   flex-direction: column;
