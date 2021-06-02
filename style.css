@@ -16,6 +16,7 @@ body {
 .section {
   padding: 50px;
   margin: auto;
+  max-width: 1500px;
 }
 
 .section h1 {
@@ -31,6 +32,10 @@ body {
 }
 
 /* HOME */
+.section.home {
+  max-width: none;
+}
+
 .home {
   height: 100vh;
   background-color: #008080;
@@ -70,10 +75,15 @@ body {
 }
 
 /* MAIN */
+/* max-height 추가해서 너무 작아지면 내용 없애버리기 */
 .main {
   display: flex;
   flex-direction: column;
   height: 100vh;
+}
+
+.main h1 {
+  height: 10vh;
 }
 
 .main-container {
@@ -82,17 +92,24 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100vh;
+  height: 80vh;
 }
 
 .main .main-container .details {
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  align-items: center;
   width: 100%;
-  height: 50%;
+  height: 60%;
   background-color: aquamarine;
-  padding: 25px 50px;
+  padding: 50px 50px;
+}
+
+.main-container .details .details-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 
 .main .main-container .details h3 {
@@ -125,21 +142,27 @@ body {
 .main .main-container .preview {
   display: flex;
   width: 100%;
-  height: 50%;
+  height: 40%;
   /* max-width: 1200px; */
   /* 작아지면 height 30?으로 바꾸기?? */
-  cursor: pointer;
-  margin: 20px 0;
+  margin-top: 6px;
+  margin-bottom: 20px;
+  justify-content: center;
+  align-items: center;
 }
 
 .main-container .preview .preview-skills,
 .main-container .preview .preview-projects,
 .main-container .preview .preview-contacts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 33%;
+  height: 100%;
   text-align: center;
-  line-height: 200px;
   background-color: aqua;
   margin: 3px;
+  cursor: pointer;
 }
 
 .main-container .preview .preview-skills:hover,
@@ -156,6 +179,8 @@ body {
 
 .skills-container {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .skill-card {
@@ -189,13 +214,15 @@ body {
 }
 
 .projects-container .project-categories .category-btn {
-  width: 33%;
+  width: 32%;
   height: 40px;
   cursor: pointer;
   border: none;
   padding: 5px 20px;
   background-color: cadetblue;
   font-size: 15px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 .projects-container .project-list {
@@ -247,6 +274,15 @@ body {
 }
 
 .contact-container .contact-links {
+  background-color: #20b2aa;
+  width: 100%;
+  height: 100%;
   font-size: 50px;
   margin: 10px;
+  text-align: center;
+}
+
+.contact-container .contact-links p {
+  font-size: 15px;
+  color: #333;
 }
