@@ -18,7 +18,8 @@
       <div class="line"></div>
       <h3>나는 뭐시기 뭐시기입니다.</h3>
       <div class="line"></div>
-      <button class="btn-start"></button>
+      <i class="fas fa-chevron-down"></i>
+      <!-- <button class="btn-start"></button> -->
     </section>
     <!-- Main -->
     <section id="main" class="section main">
@@ -56,36 +57,58 @@
       <!-- project 항목 선택(마크업 / 동적 웹사이트 / 리액트 웹앱 프로젝트) -->
       <div class="projects-container">
         <div class="project-categories">
-          <button class="category-btn" data-filter="Mark-up">
-            Mark Up Projects
-          </button>
+          <button class="category-btn selected" data-filter="*">All</button>
+          <button class="category-btn" data-filter="Mark-up">Mark Up</button>
           <button class="category-btn" data-filter="Active-web">
-            Active Web Site Projects
+            Active Web Site
           </button>
           <button class="category-btn" data-filter="React-web">
-            React Web App Projects
+            React Web App
           </button>
         </div>
         <!-- 항목에 따른 projects 리스트들 -->
         <div class="project-list">
           <!-- 추후 추가 프로젝트 타입마다 양식이 많이 다를 것 같음 -->
           <div class="projects-list-wrap">
-            <h4 class="project-title">디자인 시안 1 마크업</h4>
-            <div class="project-results">
+            <div class="project-result" data-type="Mark-up">
+              <h4 class="project-title">디자인 시안 1 마크업</h4>
               <img src="imgs/user1.png" alt="design1" class="design-template" />
               <i class="fas fa-arrow-right"></i>
-              <img
-                src="imgs/user1.png"
-                alt="design1-result"
-                class="design-result"
-              />
+              <a href="" class="design-result" target="blank">
+                <img src="imgs/user1.png" alt="design1-result" class="" />
+                <div class="project-description">
+                  <h3>my mobile example</h3>
+                  <span>clone coding with java and android</span>
+                </div>
+              </a>
             </div>
-          </div>
-
-          <div class="projects-list-wrap">
-            <h4 class="project-title">반응형 웹사이트 with JS</h4>
-            <div class="project-results">
-              <img src="imgs/user1.png" alt="design1" class="design-template" />
+            <div class="project-result" data-type="Active-web">
+              <h4 class="project-title">반응형 웹사이트 with JS</h4>
+              <a href="" class="design-result" target="blank">
+                <img
+                  src="imgs/user1.png"
+                  alt="design1-result"
+                  class="design-template"
+                />
+                <div class="project-description">
+                  <h3>my mobile example2</h3>
+                  <span>clone coding with java and android2</span>
+                </div>
+              </a>
+            </div>
+            <div class="project-result" data-type="Active-web">
+              <h4 class="project-title">React Web App</h4>
+              <a href="" class="design-result" target="blank">
+                <img
+                  src="imgs/user1.png"
+                  alt="design1-result"
+                  class="design-template"
+                />
+                <div class="project-description">
+                  <h3>my mobile example3</h3>
+                  <span>clone coding with java and android3</span>
+                </div>
+              </a>
             </div>
           </div>
         </div>
