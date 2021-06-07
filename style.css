@@ -210,13 +210,15 @@ body {
   font-size: 70px;
 }
 
-.skill-card .fa-html5:hover {
+.skill-card .fa-html5:hover,
+.skill-card .fa-html5.checked {
   background-color: antiquewhite;
   color: #333;
   box-shadow: 30px 10px 0 80px antiquewhite;
 }
 
-.skill-card .fa-css3:hover {
+.skill-card .fa-css3:hover,
+.skill-card .fa-css3.checked {
   background-color: antiquewhite;
   color: #333;
   box-shadow: 0 10px 0 80px antiquewhite;
