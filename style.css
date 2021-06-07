@@ -214,26 +214,28 @@ body {
 .skill-card .fa-html5.checked {
   background-color: antiquewhite;
   color: #333;
-  box-shadow: 30px 10px 0 80px antiquewhite;
+  box-shadow: 30px 10px 0 2000px antiquewhite;
 }
 
 .skill-card .fa-css3:hover,
 .skill-card .fa-css3.checked {
   background-color: antiquewhite;
   color: #333;
-  box-shadow: 0 10px 0 80px antiquewhite;
+  box-shadow: 0 10px 0 2000px antiquewhite;
 }
 
-.skill-card .fa-js:hover {
+.skill-card .fa-js:hover,
+.skill-card .fa-js.checked {
   background-color: antiquewhite;
   color: #333;
-  box-shadow: 0 10px 0 80px antiquewhite;
+  box-shadow: 0 10px 0 2000px antiquewhite;
 }
 
-.skill-card .fa-react:hover {
+.skill-card .fa-react:hover,
+.skill-card .fa-react.checked {
   background-color: antiquewhite;
   color: #333;
-  box-shadow: -30px 10px 0 80px antiquewhite;
+  box-shadow: -30px 10px 0 2000px antiquewhite;
 }
 
 /* Projects */
@@ -266,11 +268,95 @@ body {
 }
 
 .category-btn.selected::after,
-.category-btn:hover .category-btn::after {
+.category-btn:hover:after {
   content: "4";
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -20px;
+  right: 20px;
+  width: 20px;
+  height: 50px;
+  background-color: transparent;
+  border: 0.5px #000 solid;
+}
+
+.category-btn.selected::before,
+.category-btn:hover:before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  right: 21px;
+  width: 20px;
+  height: 20px;
+  background-color: aquamarine;
+}
+
+.category-btn.mark-up.selected::after,
+.category-btn.mark-up:hover:after {
+  content: "2";
+  position: absolute;
+  top: -20px;
+  right: 20px;
+  width: 20px;
+  height: 50px;
+  background-color: transparent;
+  border: 0.5px #000 solid;
+}
+
+.category-btn.mark-up.selected::before,
+.category-btn.mark-up:hover:before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  right: 21px;
+  width: 20px;
+  height: 20px;
+  background-color: aquamarine;
+}
+
+.category-btn.active-web.selected::after,
+.category-btn.active-web:hover:after {
+  content: "1";
+  position: absolute;
+  top: -20px;
+  right: 20px;
+  width: 20px;
+  height: 50px;
+  background-color: transparent;
+  border: 0.5px #000 solid;
+}
+
+.category-btn.active-web.selected::before,
+.category-btn.active-web:hover:before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  right: 21px;
+  width: 20px;
+  height: 20px;
+  background-color: aquamarine;
+}
+
+.category-btn.react-web.selected::after,
+.category-btn.react-web:hover:after {
+  content: "1";
+  position: absolute;
+  top: -20px;
+  right: 20px;
+  width: 20px;
+  height: 50px;
+  background-color: transparent;
+  border: 0.5px #000 solid;
+}
+
+.category-btn.react-web.selected::before,
+.category-btn.react-web:hover:before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  right: 21px;
+  width: 20px;
+  height: 20px;
+  background-color: aquamarine;
 }
 
 .projects-container .project-list {
