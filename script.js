@@ -7,6 +7,10 @@ const cssIcon = document.querySelector(".fa-css3");
 const jsIcon = document.querySelector(".fa-js");
 const reactIcon = document.querySelector(".fa-react");
 
+const downBtn = document.querySelector(".fa-chevron-down");
+
+downBtn.addEventListener("click", () => scrollIntoView("#main"));
+
 // preview에서 선택하는대로 해당 section으로 스크롤 이동
 previews.forEach((preview) => {
   preview.addEventListener("click", (event) => {
@@ -22,6 +26,11 @@ previews.forEach((preview) => {
 
 function scrollIntoView(selector) {
   const scrollTo = document.querySelector(selector);
+  console.log(scrollTo);
+  if (selector === "#home") {
+    // selector가 home일 경우는 그냥 스크롤 맨 위로 보내기
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }
   scrollTo.scrollIntoView({ behavior: "smooth" });
 }
 
@@ -105,4 +114,18 @@ projectBtnContainer.addEventListener("click", (e) => {
       result.classList.add("invisible");
     }
   });
+});
+
+// Show 'arrow-up' button when scrolling down
+const arrowUp = document.querySelector(".arrow-up");
+document.addEventListener("scroll", () => {
+  if (window.scrollY > 100) {
+    arrowUp.classList.add("visible");
+  } else {
+    arrowUp.classList.remove("visible");
+  }
+});
+arrowUp.addEventListener("click", () => {
+  // scrollIntoView("#home");
+  scrollIntoView("#main");
 });

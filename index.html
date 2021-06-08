@@ -17,122 +17,161 @@
       <div class="home-wrap">
         <h1>유지수 Yoo.JS</h1>
         <div class="line"></div>
-        <h3>나는 뭐시기 뭐시기입니다.</h3>
+        <h3>
+          안녕하세요. <br />
+          프론트엔드 신입 개발자 유지수입니다.
+        </h3>
         <div class="line"></div>
         <i class="fas fa-chevron-down"></i>
       </div>
       <!-- <button class="btn-start"></button> -->
     </section>
+    <!-- 그림 -->
     <!-- Main -->
     <section id="main" class="section main">
-      <h1>WHO I AM</h1>
-      <div class="main-container">
-        <div class="details">
-          <div class="details-wrap">
-            <h3>유지수</h3>
-            <p>상세 설명 위에 거보다는 조금 더 자세하게</p>
-            <button class="btn-resume">이력서 다운</button>
-          </div>
+      <div class="wrap">
+        <div class="image-container">
+          <img
+            src="icons/pablita-313.png"
+            alt=""
+            class="bottom-image woman-pen"
+          />
+          <img src="icons/taxi-751.png" alt="" class="bottom-image hand-left" />
+          <img
+            src="icons/taxi-752.png"
+            alt=""
+            class="bottom-image hand-right"
+          />
+          <img src="icons/lime-252.png" alt="" class="bottom-image pen" />
+          <img
+            src="icons/pablita-22.png"
+            alt=""
+            class="bottom-image man-sitting"
+          />
         </div>
-        <div class="preview">
-          <div class="preview-skills" data-set="#skills">Skills</div>
-          <div class="preview-projects" data-set="#projects">Projects</div>
-          <div class="preview-contacts" data-set="#contact">Contacts</div>
+        <h1>WHO I AM</h1>
+        <div class="main-container">
+          <div class="details">
+            <div class="details-wrap">
+              <h3>유지수</h3>
+              <p>상세 설명 위에 거보다는 조금 더 자세하게</p>
+              <button class="btn-resume">이력서 다운</button>
+            </div>
+          </div>
+          <div class="preview">
+            <div class="preview-skills" data-set="#skills">Skills</div>
+            <div class="preview-projects" data-set="#projects">Projects</div>
+            <div class="preview-contacts" data-set="#contact">Contacts</div>
+          </div>
         </div>
       </div>
     </section>
     <!-- Skills -->
     <section id="skills" class="section skills">
-      <h1>Skills</h1>
-      <p>click activated skills and move to related projects</p>
-      <div class="skills-container">
-        <div class="skill-card html"><i class="fab fa-html5"></i>HTML</div>
-        <div class="skill-card css"><i class="fab fa-css3"></i>CSS</div>
-        <div class="skill-card js"><i class="fab fa-js"></i>JS</div>
-        <div class="skill-card react"><i class="fab fa-react"></i>React</div>
+      <div class="wrap">
+        <h1>Skills</h1>
+        <p>click activated skills and move to related projects</p>
+        <div class="skills-container">
+          <div class="skill-card html"><i class="fab fa-html5"></i>HTML</div>
+          <div class="skill-card css"><i class="fab fa-css3"></i>CSS</div>
+          <div class="skill-card js"><i class="fab fa-js"></i>JS</div>
+          <div class="skill-card react"><i class="fab fa-react"></i>React</div>
+        </div>
       </div>
     </section>
     <!-- Projects -->
     <section id="projects" class="section projects">
-      <h1>Projects</h1>
-      <!-- <h3>Front-end projects</h3> -->
-      <!-- project 항목 선택(마크업 / 동적 웹사이트 / 리액트 웹앱 프로젝트) -->
-      <div class="projects-container">
-        <div class="project-categories">
-          <button class="category-btn all selected" data-filter="*">All</button>
-          <button class="category-btn mark-up" data-filter="Mark-up">
-            Mark Up
-          </button>
-          <button class="category-btn active-web" data-filter="Active-web">
-            Active Web Site
-          </button>
-          <button class="category-btn react-web" data-filter="React-web">
-            React Web App
-          </button>
-        </div>
-        <!-- 항목에 따른 projects 리스트들 -->
-        <div class="project-list">
-          <!-- 추후 추가 프로젝트 타입마다 양식이 많이 다를 것 같음 -->
-          <div class="projects-list-wrap">
-            <div class="project-result" data-type="Mark-up">
-              <h4 class="project-title">디자인 시안 1 마크업</h4>
-              <img src="imgs/user1.png" alt="design1" class="design-template" />
-              <i class="fas fa-arrow-right"></i>
-              <a href="" class="design-result" target="blank">
+      <div class="wrap">
+        <h1>Projects</h1>
+        <!-- <h3>Front-end projects</h3> -->
+        <!-- project 항목 선택(마크업 / 동적 웹사이트 / 리액트 웹앱 프로젝트) -->
+        <div class="projects-container">
+          <div class="project-categories">
+            <button class="category-btn all selected" data-filter="*">
+              All
+            </button>
+            <button class="category-btn mark-up" data-filter="Mark-up">
+              Mark Up
+            </button>
+            <button class="category-btn active-web" data-filter="Active-web">
+              Active Web Site
+            </button>
+            <button class="category-btn react-web" data-filter="React-web">
+              React Web App
+            </button>
+          </div>
+          <!-- 항목에 따른 projects 리스트들 -->
+          <div class="project-list">
+            <!-- 추후 추가 프로젝트 타입마다 양식이 많이 다를 것 같음 -->
+            <div class="projects-list-wrap">
+              <div class="project-result" data-type="Mark-up">
+                <h4 class="project-title">디자인 시안 1 마크업</h4>
                 <img
                   src="imgs/user1.png"
-                  alt="design1-result"
+                  alt="design1"
                   class="design-template"
                 />
-                <div class="project-description">
-                  <h3>my mobile example</h3>
-                  <span>clone coding with java and android</span>
-                </div>
-              </a>
-            </div>
-            <div class="project-result" data-type="Mark-up">
-              <h4 class="project-title">디자인 시안 2 마크업</h4>
-              <img src="imgs/user1.png" alt="design1" class="design-template" />
-              <i class="fas fa-arrow-right"></i>
-              <a href="" class="design-result" target="blank">
+                <i class="fas fa-arrow-right"></i>
+                <a href="" class="design-result" target="blank">
+                  <img
+                    src="imgs/user1.png"
+                    alt="design1-result"
+                    class="design-template"
+                  />
+                  <div class="project-description">
+                    <h3>my mobile example</h3>
+                    <span>clone coding with java and android</span>
+                  </div>
+                </a>
+              </div>
+              <div class="project-result" data-type="Mark-up">
+                <h4 class="project-title">디자인 시안 2 마크업</h4>
                 <img
                   src="imgs/user1.png"
-                  alt="design1-result"
+                  alt="design1"
                   class="design-template"
                 />
-                <div class="project-description">
-                  <h3>my mobile example1</h3>
-                  <span>clone coding with java and android1</span>
-                </div>
-              </a>
-            </div>
-            <div class="project-result" data-type="Active-web">
-              <h4 class="project-title">반응형 웹사이트 with JS</h4>
-              <a href="" class="design-result" target="blank">
-                <img
-                  src="imgs/user1.png"
-                  alt="design1-result"
-                  class="design-template"
-                />
-                <div class="project-description">
-                  <h3>my mobile example2</h3>
-                  <span>clone coding with java and android2</span>
-                </div>
-              </a>
-            </div>
-            <div class="project-result" data-type="React-web">
-              <h4 class="project-title">React Web App</h4>
-              <a href="" class="design-result" target="blank">
-                <img
-                  src="imgs/user1.png"
-                  alt="design1-result"
-                  class="design-template"
-                />
-                <div class="project-description">
-                  <h3>my mobile example3</h3>
-                  <span>clone coding with java and android3</span>
-                </div>
-              </a>
+                <i class="fas fa-arrow-right"></i>
+                <a href="" class="design-result" target="blank">
+                  <img
+                    src="imgs/user1.png"
+                    alt="design1-result"
+                    class="design-template"
+                  />
+                  <div class="project-description">
+                    <h3>my mobile example1</h3>
+                    <span>clone coding with java and android1</span>
+                  </div>
+                </a>
+              </div>
+              <div class="project-result" data-type="Active-web">
+                <h4 class="project-title">반응형 웹사이트 with JS</h4>
+                <a href="" class="design-result" target="blank">
+                  <img
+                    src="imgs/user1.png"
+                    alt="design1-result"
+                    class="design-template"
+                  />
+                  <div class="project-description">
+                    <h3>my mobile example2</h3>
+                    <span>clone coding with java and android2</span>
+                  </div>
+                </a>
+              </div>
+              <div class="project-result" data-type="React-web">
+                <h4 class="project-title">React Web App</h4>
+                <a href="" class="design-result" target="blank">
+                  <img
+                    src="imgs/user1.png"
+                    alt="design1-result"
+                    class="design-template"
+                  />
+                  <div class="project-description">
+                    <h3>my mobile example3</h3>
+                    <span>clone coding with java and android3</span>
+                  </div>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -140,15 +179,17 @@
     </section>
     <!-- Contact -->
     <section id="contact" class="section contact">
-      <h1>Contact</h1>
-      <div class="contact-container">
-        <div class="contact-info">
-          <h3>Info.</h3>
-          <img src="imgs/user1.png" alt="" class="info-left" />
-          <div class="info-right">
-            <a href="#" class="info-email">jisu129@gmail.com</a>
-            <p class="info-phone">010-6490-6210</p>
-            <p class="info-kakao">something</p>
+      <div class="wrap">
+        <h1>Contact</h1>
+        <div class="contact-container">
+          <div class="contact-info">
+            <h3>Info.</h3>
+            <img src="imgs/user1.png" alt="" class="info-left" />
+            <div class="info-right">
+              <a href="#" class="info-email">jisu129@gmail.com</a>
+              <p class="info-phone">010-6490-6210</p>
+              <p class="info-kakao">something</p>
+            </div>
           </div>
         </div>
       </div>
@@ -163,6 +204,10 @@
       </a>
       <p class="contact__rights">2021 JISU - All rights reserved</p>
     </div>
+    <!-- Arrow up -->
+    <button class="arrow-up">
+      <i class="fas fa-arrow-up"></i>
+    </button>
     <script src="script.js"></script>
   </body>
 </html>

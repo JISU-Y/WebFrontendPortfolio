@@ -14,10 +14,19 @@ body {
 }
 
 .section {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f9fd;
+}
+
+.section .wrap {
+  width: 100%;
+  margin: 0;
   padding: 50px;
-  margin: auto;
-  max-width: 1500px;
-  background-color: #eee;
+  max-width: 1300px;
+  background-color: #f8f9fd;
 }
 
 .section h1 {
@@ -35,7 +44,13 @@ body {
 /* HOME */
 .section.home {
   max-width: none;
-  background-attachment: fixed;
+}
+
+.section.home img {
+  position: absolute;
+  top: 20px;
+  height: 50px;
+  transform: rotate(180deg);
 }
 
 .home {
@@ -74,6 +89,7 @@ body {
   font-size: 50px;
   position: absolute;
   bottom: 30px;
+  cursor: pointer;
 }
 
 .home .home-wrap .btn-start {
@@ -95,6 +111,44 @@ body {
   width: 300px;
 }
 
+/* home의 bottom image (main안에 있음)*/
+image-container {
+  position: absolute;
+  top: -250px;
+  left: 0;
+  width: 100%;
+  height: 250px;
+}
+
+.bottom-image {
+  position: absolute;
+  top: -250px;
+  width: 250px;
+  height: 250px;
+}
+
+.bottom-image.hand-left {
+  left: 150px;
+  visibility: hidden;
+}
+
+.bottom-image.hand-right {
+  right: 150px;
+  visibility: hidden;
+}
+
+.bottom-image.pen {
+  right: 150px;
+  width: 100px;
+  height: 100px;
+  z-index: 1;
+  transform: rotate(-65deg) translate(10px, -10px);
+}
+
+.bottom-image.man-sitting {
+  right: 50px;
+}
+
 /* MAIN */
 /* max-height 추가해서 너무 작아지면 내용 없애버리기 */
 .main {
@@ -103,6 +157,12 @@ body {
   height: 100vh;
   /* parallax */
   margin-top: 100vh;
+  /* image container absolute하기 위함 */
+  position: relative;
+}
+
+.main .wrap {
+  height: 100vh;
 }
 
 .main h1 {
@@ -166,7 +226,6 @@ body {
   display: flex;
   width: 100%;
   height: 40%;
-  /* max-width: 1200px; */
   /* 작아지면 height 30?으로 바꾸기?? */
   margin-top: 6px;
   margin-bottom: 20px;
@@ -270,7 +329,7 @@ body {
 }
 
 .projects-container .project-categories .category-btn {
-  width: 23%;
+  width: 25%;
   height: 40px;
   cursor: pointer;
   border: none;
@@ -400,6 +459,7 @@ body {
   align-items: center;
   width: 100%;
   font-size: 50px;
+  margin-bottom: 30px;
 }
 
 .projects-container .project-list .project-result.invisible {
@@ -531,4 +591,30 @@ body {
 .contact-links p {
   font-size: 14px;
   color: #333;
+}
+
+/* arrow up button */
+.arrow-up {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+  background-color: midnightblue;
+  color: pink;
+  border-radius: 50%;
+  /* scroll 되었을 때만 보이게 
+  그런데 display none을 하게되면 transition을 적용할 수 없다.
+  그래서 여기서는 opactity를 0으로 해주자*/
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+  pointer-events: none;
+  cursor: pointer;
+}
+
+.arrow-up.visible {
+  /* display: block; */
+  opacity: 1;
+  pointer-events: auto;
 }
