@@ -381,6 +381,10 @@ body {
   font-size: 50px;
 }
 
+.projects-container .project-list .project-result.invisible {
+  display: none;
+}
+
 .project-result .design-result {
   position: relative;
 }
