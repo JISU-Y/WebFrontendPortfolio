@@ -279,9 +279,7 @@ image-container {
   display: none;
 }
 
-.main-container .preview .preview-skills:hover .skillbox,
-.main-container .preview .preview-projects:hover .skillbox,
-.main-container .preview .preview-contacts:hover .skillbox {
+.main-container .preview .preview-skills:hover .skillbox {
   opacity: 1;
   transform: scale(1);
 }
@@ -306,7 +304,13 @@ image-container {
   transition: 0.5s ease-in-out;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to bottom right, red 50%, blue 50%);
+  color: #000;
+  background: linear-gradient(160deg, orangered 50%, royalblue 50%);
+}
+
+.skillbox.left i {
+  margin-bottom: 10px;
+  transform: translateY(5px);
 }
 
 .skillbox.right {
@@ -354,6 +358,60 @@ image-container {
   color: #fff;
 }
 
+.main-container .preview .preview-projects:hover .image-container,
+.main-container .preview .preview-projects:hover .buttons-container {
+  display: flex;
+}
+
+.preview-projects .image-container {
+  display: none;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.preview-projects .image-container .each-image {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+/* .preview-projects .image-container .each-image.first {
+  margin-left: 0;
+} */
+
+.image-container .each-image img {
+  width: 200%;
+  margin-top: 10%;
+}
+
+.preview-projects .buttons-container {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.preview-projects .buttons-container .btn {
+  width: 25px;
+  height: 25px;
+  background-color: cornflowerblue;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
 /* Skills */
 .skills p {
   margin-bottom: 20px;
@@ -366,7 +424,7 @@ image-container {
 }
 
 .skill-card {
-  background-color: brown;
+  background-color: #00ced1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -375,7 +433,7 @@ image-container {
   width: 300px;
   height: 300px;
   max-width: 1200px;
-  color: blueviolet;
+  color: #333;
   font-size: 20px;
   cursor: pointer;
   overflow: hidden;
@@ -385,32 +443,42 @@ image-container {
   font-size: 70px;
 }
 
+.skill-card:nth-child(1) {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.skill-card:nth-child(4) {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
 .skill-card .fa-html5:hover,
 .skill-card .fa-html5.checked {
-  background-color: antiquewhite;
+  background-color: orangered;
   color: #333;
-  box-shadow: 30px 10px 0 2000px antiquewhite;
+  box-shadow: 30px 10px 0 2000px orangered;
 }
 
 .skill-card .fa-css3:hover,
 .skill-card .fa-css3.checked {
-  background-color: antiquewhite;
-  color: #333;
-  box-shadow: 0 10px 0 2000px antiquewhite;
+  background-color: royalblue;
+  color: #fff;
+  box-shadow: 0 10px 0 2000px royalblue;
 }
 
 .skill-card .fa-js:hover,
 .skill-card .fa-js.checked {
-  background-color: antiquewhite;
+  background-color: yellow;
   color: #333;
-  box-shadow: 0 10px 0 2000px antiquewhite;
+  box-shadow: 0 10px 0 2000px yellow;
 }
 
 .skill-card .fa-react:hover,
 .skill-card .fa-react.checked {
-  background-color: antiquewhite;
-  color: #333;
-  box-shadow: -30px 10px 0 2000px antiquewhite;
+  background-color: skyblue;
+  color: #fff;
+  box-shadow: -30px 10px 0 2000px skyblue;
 }
 
 /* Projects */
