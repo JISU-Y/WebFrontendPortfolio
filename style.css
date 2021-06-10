@@ -160,6 +160,11 @@ image-container {
   position: relative;
 }
 
+/* .wrap {
+  background: no-repeat center url("icons/pablo-746_2.png");
+  background-size: 100% 110%;
+} */
+
 .main h1 {
   height: 10vh;
   margin-bottom: 0;
@@ -174,7 +179,7 @@ image-container {
   width: 100%;
   height: 80vh;
   padding: 6px 3px;
-  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
 }
 
 .main .main-container .details {
@@ -294,6 +299,7 @@ image-container {
   pointer-events: none;
   font-weight: bold;
   color: #fff;
+  border-radius: 5px;
 }
 
 .skillbox.left {
@@ -358,35 +364,38 @@ image-container {
   color: #fff;
 }
 
-.main-container .preview .preview-projects:hover .image-container,
-.main-container .preview .preview-projects:hover .buttons-container {
+.preview-projects .image-container {
   display: flex;
+  background-color: antiquewhite;
 }
 
-.preview-projects .image-container {
-  display: none;
-  width: 100%;
-  height: 100%;
-  align-items: center;
-  text-align: center;
-  overflow: hidden;
+.preview-projects:hover .image-container {
+}
+
+.preview-projects:hover .image-container .each-image {
+  display: flex;
 }
 
 .preview-projects .image-container .each-image {
+  background-color: blueviolet;
+  display: none;
   width: 100%;
-  display: flex;
+  height: 100%;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   text-align: center;
+  /* padding: 0 37.5%; */
 }
 
-/* .preview-projects .image-container .each-image.first {
-  margin-left: 0;
-} */
-
 .image-container .each-image img {
-  width: 200%;
+  width: 100%;
+  height: 100%;
   margin-top: 10%;
+}
+
+.main-container .preview .preview-projects:hover .buttons-container {
+  display: flex;
 }
 
 .preview-projects .buttons-container {
@@ -410,6 +419,35 @@ image-container {
   font-size: 20px;
   cursor: pointer;
   margin: 0 5px;
+}
+
+.preview-contacts .icons,
+.preview-contacts .contents {
+  display: none;
+  width: 20%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  font-size: 25px;
+  margin-left: 10px;
+  pointer-events: none;
+}
+
+.preview-contacts .contents {
+  width: 80%;
+  align-items: flex-end;
+  word-break: break-all;
+  font-size: 18px;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.preview-contacts:hover .icons,
+.preview-contacts:hover .contents {
+  display: flex;
+  transform: translateX(0);
+  /* transition 왜 안먹지 */
 }
 
 /* Skills */
@@ -508,6 +546,7 @@ image-container {
   border-top-right-radius: 5px;
   position: relative;
   margin: 15px 1.5px 0 1.5px;
+  transition: 0.2s ease-in-out;
 }
 
 /* 1,4번 버튼 양 옆에 margin 없앰 */
@@ -524,6 +563,7 @@ image-container {
   transform: scaleY(1.3) translateY(-4px);
 }
 
+/* 포스트잇 네모 */
 .category-btn.selected::after,
 .category-btn:hover:after {
   content: "4";
@@ -533,9 +573,12 @@ image-container {
   width: 20px;
   height: 50px;
   background-color: transparent;
-  border: 0.5px #000 solid;
+  color: #555;
+  border: 0.5px rgba(0, 0, 0, 0.15) solid;
+  border-radius: 1px;
 }
 
+/* 숫자 */
 .category-btn.selected::before,
 .category-btn:hover:before {
   content: "";
@@ -545,105 +588,55 @@ image-container {
   width: 20px;
   height: 20px;
   background-color: aquamarine;
+  color: #555;
 }
 
 .category-btn.mark-up.selected::after,
 .category-btn.mark-up:hover:after {
   content: "2";
-  position: absolute;
-  top: -20px;
-  right: 20px;
-  width: 20px;
-  height: 50px;
-  background-color: transparent;
-  border: 0.5px #000 solid;
-}
-
-.category-btn.mark-up.selected::before,
-.category-btn.mark-up:hover:before {
-  content: "";
-  position: absolute;
-  top: -20px;
-  right: 21px;
-  width: 20px;
-  height: 20px;
-  background-color: aquamarine;
 }
 
 .category-btn.active-web.selected::after,
 .category-btn.active-web:hover:after {
   content: "1";
-  position: absolute;
-  top: -20px;
-  right: 20px;
-  width: 20px;
-  height: 50px;
-  background-color: transparent;
-  border: 0.5px #000 solid;
-}
-
-.category-btn.active-web.selected::before,
-.category-btn.active-web:hover:before {
-  content: "";
-  position: absolute;
-  top: -20px;
-  right: 21px;
-  width: 20px;
-  height: 20px;
-  background-color: aquamarine;
 }
 
 .category-btn.react-web.selected::after,
 .category-btn.react-web:hover:after {
   content: "1";
-  position: absolute;
-  top: -20px;
-  right: 20px;
-  width: 20px;
-  height: 50px;
-  background-color: transparent;
-  border: 0.5px #000 solid;
-}
-
-.category-btn.react-web.selected::before,
-.category-btn.react-web:hover:before {
-  content: "";
-  position: absolute;
-  top: -20px;
-  right: 21px;
-  width: 20px;
-  height: 20px;
-  background-color: aquamarine;
 }
 
 .projects-container .project-list {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   margin: 0;
   width: 100%;
 }
 
 .projects-container .project-list .projects-list-wrap {
   /* 임의로 맞춤.. */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   width: 100%;
   background-color: cadetblue;
   padding: 20px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .projects-container .project-list .project-title {
   margin-bottom: 20px;
   font-size: 20px;
+  display: none;
 }
 
 .projects-container .project-list .project-result {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 100%;
   font-size: 50px;
-  margin-bottom: 30px;
+  margin: 20px 0;
+  padding: 20px 30px;
+  /* border-bottom: 1.5px solid slategray; */
 }
 
 .projects-container .project-list .project-result.invisible {
@@ -701,8 +694,8 @@ image-container {
 }
 
 .project-list .project-result img {
-  width: 200px;
-  height: 270px;
+  width: 150px;
+  height: 200px;
   margin: 0 40px;
 }
 
@@ -719,22 +712,43 @@ image-container {
 .contact-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   height: 500px;
-  margin: 0;
+  margin: 30px;
   padding: 0;
 }
 
 .contact-container .contact-info {
+  position: relative;
+  transform: rotate(-30deg);
+  transform-origin: right center;
+  transition: transform 1s ease-in-out;
+}
+
+.contact-container .contact-info:hover {
+  transform: rotate(0);
+  transform-origin: right center;
+}
+
+.contact-container .contact-info .info-wrap {
   background-color: cornflowerblue;
   display: flex;
-  width: 600px;
-  height: 350px;
+  width: 500px;
+  height: 300px;
   border-radius: 10px;
   margin-top: 30px;
   position: relative;
   padding: 15px;
+  z-index: 1;
+}
+
+.contact-container .card-image {
+  position: absolute;
+  top: 150px;
+  left: 10px;
+  width: 500px;
+  height: 358px;
+  transform: rotate(173deg);
 }
 
 .contact-container .contact-info h3 {
