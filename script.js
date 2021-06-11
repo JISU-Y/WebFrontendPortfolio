@@ -118,12 +118,15 @@ projectBtnContainer.addEventListener("click", (e) => {
 
 // Show 'arrow-up' button when scrolling down
 const arrowUp = document.querySelector(".arrow-up");
+const flame = document.querySelector(".flame");
 document.addEventListener("scroll", () => {
   if (window.scrollY > 100) {
     arrowUp.classList.add("visible");
   } else {
     arrowUp.classList.remove("visible");
   }
+  // flame.style.opacity = "0";
+  // setTimeout((flame.style.opacity = "1"), 30000);
 });
 arrowUp.addEventListener("click", () => {
   // scrollIntoView("#home");
