@@ -7,7 +7,12 @@ const cssIcon = document.querySelector(".fa-css3");
 const jsIcon = document.querySelector(".fa-js");
 const reactIcon = document.querySelector(".fa-react");
 
-const downBtn = document.querySelector(".fa-chevron-down");
+const home_lines = document.querySelectorAll(".home-wrap .line");
+window.addEventListener("DOMContentLoaded", function () {
+  home_lines.forEach((line) => (line.style.width = "400px"));
+});
+
+const downBtn = document.querySelector(".down");
 
 downBtn.addEventListener("click", () => scrollIntoView("#main"));
 
@@ -160,7 +165,8 @@ function changeImage() {
 const arrowUp = document.querySelector(".arrow-up");
 const flame = document.querySelector(".flame");
 document.addEventListener("scroll", () => {
-  if (window.scrollY > 100) {
+  if (window.scrollY > window.innerHeight) {
+    // window.innerHeight -> viewport 만큼
     arrowUp.classList.add("visible");
   } else {
     arrowUp.classList.remove("visible");
