@@ -14,7 +14,9 @@ downBtn.addEventListener("click", () => scrollIntoView("#main"));
 // preview에서 선택하는대로 해당 section으로 스크롤 이동
 previews.forEach((preview) => {
   preview.addEventListener("click", (event) => {
-    const target = event.target;
+    const target = event.target.classList.contains("section")
+      ? event.target
+      : event.target.parentNode; // project container 땜에
     const link = target.dataset.set;
 
     if (link == null) {
@@ -115,6 +117,38 @@ projectBtnContainer.addEventListener("click", (e) => {
     }
   });
 });
+
+// previewProject 넘기기
+const imageContainer = document.querySelector(".image-container");
+const pre_projects = document.querySelectorAll(".image-container .each-image");
+const btnContainer = document.querySelector(".buttons-container");
+const left_btn = document.getElementById("left");
+const right_btn = document.getElementById("right");
+
+let idx = 0;
+
+btnContainer.addEventListener("click", (e) => {
+  if (e.target.id === "left") {
+    idx--;
+    changeImage();
+  } else {
+    idx++;
+    changeImage();
+  }
+});
+
+function changeImage() {
+  if (idx > pre_projects.length - 1) {
+    //nodeList가 총 여기서는 4개 인데 idx는 0부터 시작하니까
+    idx = 0;
+  } else if (idx < 0) {
+    idx = pre_projects.length - 1;
+  }
+
+  imageContainer.style.transform = `translateX(${
+    -idx * (100 / pre_projects.length)
+  }%)`; // 100%에서 preject의 개수만큼 나누어서 X를 옮긴다.
+}
 
 // Show 'arrow-up' button when scrolling down
 const arrowUp = document.querySelector(".arrow-up");

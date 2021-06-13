@@ -19,8 +19,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fff;
-  /* background-color: #f8f9fd; */
 }
 
 .section .wrap {
@@ -41,6 +39,23 @@ body {
   width: 100px;
   background-color: #fff;
   margin: 10px 0;
+}
+
+.main,
+.main .wrap {
+  background: linear-gradient(#fff, #eee);
+}
+.skills,
+.skills .wrap {
+  background: linear-gradient(#eee, #ddd);
+}
+.projects,
+.projects .wrap {
+  background: linear-gradient(#ddd, #ccc);
+}
+.contact,
+.contact .wrap {
+  background: linear-gradient(#ccc, #aaa);
 }
 
 /* HOME */
@@ -105,6 +120,53 @@ body {
 
 .home .home-wrap .line {
   width: 300px;
+}
+
+.home .home-image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.home .home-image-container img {
+  width: 100px;
+}
+.home .home-image-container .cloud1 {
+  top: 5%;
+  left: 50px;
+}
+.home .home-image-container .cloud2 {
+  top: 5%;
+  right: 50px;
+}
+.home .home-image-container .cloud3 {
+  width: 70px;
+  height: auto;
+  opacity: 0.7;
+  top: 25%;
+  left: 50%;
+}
+.home .home-image-container .cloud4 {
+  top: 25%;
+  right: 50px;
+}
+.home .home-image-container .cloud5 {
+  top: 50%;
+  left: 100px;
+}
+.home .home-image-container .cloud6 {
+  top: 50%;
+  right: 50px;
+}
+.home .home-image-container .cloud7 {
+  top: 75%;
+  left: 50px;
+}
+.home .home-image-container .cloud8 {
+  top: 75%;
+  right: 50px;
 }
 
 /* home의 bottom image (main안에 있음)*/
@@ -258,6 +320,7 @@ body {
   margin: 3px;
   cursor: pointer;
   position: relative;
+  overflow: hidden;
 }
 
 .main-container .preview .preview-skills:hover,
@@ -361,32 +424,36 @@ body {
 
 .preview-projects .image-container {
   display: flex;
-  background-color: antiquewhite;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% * 4);
+  height: 100%;
+  opacity: 0;
+  transition: all 0.3s ease-in;
 }
 
-.preview-projects:hover .image-container {
-}
-
+.preview-projects:hover .image-container,
 .preview-projects:hover .image-container .each-image {
   display: flex;
+  opacity: 1;
 }
 
 .preview-projects .image-container .each-image {
-  background-color: blueviolet;
   display: none;
-  width: 100%;
-  height: 100%;
+  width: calc(100% / 4);
+  height: auto;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  /* padding: 0 37.5%; */
+  padding: 2% 7%;
 }
 
 .preview .preview-projects .image-container .each-image img {
   width: 100%;
   height: 100%;
-  margin-top: 10%;
+  margin-top: 5%;
 }
 
 .main-container .preview .preview-projects:hover .buttons-container {
@@ -414,6 +481,10 @@ body {
   font-size: 20px;
   cursor: pointer;
   margin: 0 5px;
+}
+
+.preview-projects .buttons-container .btn i {
+  pointer-events: none;
 }
 
 .preview-contacts .icons,
@@ -780,7 +851,7 @@ body {
 .contact-links {
   background: no-repeat top url("icons/flamenco-247.png");
   background-size: 150%;
-  background-color: #fff;
+  background-color: #aaa;
   width: 100%;
   height: 100%;
   font-size: 35px;
