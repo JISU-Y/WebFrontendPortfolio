@@ -14,9 +14,11 @@ downBtn.addEventListener("click", () => scrollIntoView("#main"));
 // preview에서 선택하는대로 해당 section으로 스크롤 이동
 previews.forEach((preview) => {
   preview.addEventListener("click", (event) => {
-    const target = event.target.classList.contains("section")
-      ? event.target
-      : event.target.parentNode; // project container 땜에
+    let target = event.target;
+    if (target.classList.contains("buttons-container")) {
+      // project 일 때
+      target = event.target.parentNode;
+    }
     const link = target.dataset.set;
 
     if (link == null) {
@@ -28,7 +30,6 @@ previews.forEach((preview) => {
 
 function scrollIntoView(selector) {
   const scrollTo = document.querySelector(selector);
-  console.log(scrollTo);
   if (selector === "#home") {
     // selector가 home일 경우는 그냥 스크롤 맨 위로 보내기
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
@@ -131,7 +132,7 @@ btnContainer.addEventListener("click", (e) => {
   if (e.target.id === "left") {
     idx--;
     changeImage();
-  } else {
+  } else if (e.target.id === "right") {
     idx++;
     changeImage();
   }
