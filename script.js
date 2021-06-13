@@ -15,11 +15,16 @@ downBtn.addEventListener("click", () => scrollIntoView("#main"));
 previews.forEach((preview) => {
   preview.addEventListener("click", (event) => {
     let target = event.target;
-    if (target.classList.contains("buttons-container")) {
-      // project 일 때
+    if (
+      target.classList.contains("buttons-container") ||
+      target.classList.contains("this")
+    ) {
+      // project 일 때 는 button container로,
+      // media query 적용되었을 때는 span으로 인식한다.
       target = event.target.parentNode;
     }
     const link = target.dataset.set;
+    console.log(target);
 
     if (link == null) {
       return;
