@@ -120,7 +120,7 @@ body {
 
 .home .home-wrap .line {
   width: 0;
-  transition: 0.7s linear;
+  transition: 1.5s linear;
 }
 
 .home .home-image-container {
@@ -204,6 +204,20 @@ body {
   height: auto;
   opacity: 0.7;
   transform: translateX(-120%) scaleY(-1) rotate(45deg);
+}
+
+.home-bottom-container .dot {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  width: 8px;
+  height: auto;
+  opacity: 0.7;
+  transform: translate(-410%, -50%);
+}
+
+.home-bottom-container .dot.dot2 {
+  transform: translate(-250%, -50%);
 }
 
 .home-bottom-container .down {
@@ -550,7 +564,6 @@ body {
 /* Skills */
 .skills {
   position: relative;
-  z-index: -1;
 }
 
 .skills .airplane {
@@ -559,7 +572,6 @@ body {
   left: -50%;
   width: 1500px;
   height: auto;
-  z-index: 0;
 }
 
 .skills p {
@@ -801,12 +813,11 @@ body {
   display: block;
   position: relative;
   left: 50%;
-  width: 25px;
+  width: 15%;
   height: 2px;
   margin-left: -12px;
   margin-top: 8px;
   background-color: gray;
-  transform: translateX(-50%);
 }
 
 .project-list .project-result img {
