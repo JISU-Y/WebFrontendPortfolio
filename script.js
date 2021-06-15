@@ -97,6 +97,7 @@ reactIcon.addEventListener("mouseleave", () => {
 // projects
 const projectBtnContainer = document.querySelector(".project-categories");
 const projectListContainer = document.querySelector(".project-list");
+const projectsListWrapContainer = document.querySelector(".projects-list-wrap");
 const projectResults = document.querySelectorAll(".project-result");
 
 projectBtnContainer.addEventListener("click", (e) => {
@@ -118,6 +119,17 @@ projectBtnContainer.addEventListener("click", (e) => {
   });
   // 선택된 버튼에 selected 추가
   e.target.classList.add("selected");
+
+  // project list wrap에 효과 주기
+  // projectsListWrapContainer.classList.add("anim-out");
+  projectResults.forEach((result) => {
+    result.classList.add("anim-out");
+  });
+  setTimeout(() => {
+    projectResults.forEach((result) => {
+      result.classList.remove("anim-out");
+    });
+  }, 250);
 
   // data-filter 로 거르기
   projectResults.forEach((result) => {
