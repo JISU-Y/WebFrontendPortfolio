@@ -809,6 +809,7 @@ body {
   font-size: medium;
   transform: translateY(10px);
   transition: all 0.5s ease-in;
+  padding: 10px;
 }
 
 .design-result:hover .project-description {
@@ -830,6 +831,12 @@ body {
   margin-left: -12px;
   margin-top: 8px;
   background-color: gray;
+}
+
+.project-description span {
+  font-size: 15px;
+  font-weight: bold;
+  color: deeppink;
 }
 
 .project-list .project-result img {
