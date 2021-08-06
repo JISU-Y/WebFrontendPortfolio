@@ -480,7 +480,8 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: calc(100% * 4);
+  /* project 추가하면 바꿔야함... */
+  width: calc(100% * 5);
   height: 100%;
   opacity: 0;
   transition: all 0.3s ease-in;
@@ -494,7 +495,8 @@ body {
 
 .preview-projects .image-container .each-image {
   display: none;
-  width: calc(100% / 4);
+  /* project 추가하면 바꿔야함... */
+  width: calc(100% / 5);
   height: auto;
   flex-direction: column;
   justify-content: center;
