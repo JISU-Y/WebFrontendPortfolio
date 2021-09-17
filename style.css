@@ -576,17 +576,18 @@ body {
   position: relative;
 }
 
-.skills .airplane {
-  position: absolute;
-  top: 0;
-  left: -50%;
-  width: 1500px;
-  height: auto;
-}
-
 .skills p {
   display: none;
   margin-bottom: 20px;
+}
+
+.main-stacks {
+  margin-bottom: 20px;
+}
+
+.main-stacks-title,
+.sub-stacks-title {
+  margin-bottom: 10px;
 }
 
 .skills-container {
@@ -652,6 +653,52 @@ body {
   background-color: skyblue;
   color: #fff;
   box-shadow: -30px 10px 0 2000px skyblue;
+}
+
+.sub-stacks-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+}
+
+.sub-stacks-card {
+  background-color: #dbe6fd;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 50%;
+  height: 100px;
+  color: #333;
+  font-size: 17px;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  margin-right: 5px;
+}
+
+.sub-stacks-card.mongodb {
+  background: #dbe6fd;
+}
+
+.sub-stacks-card.mongodb:hover {
+  background: linear-gradient(
+    to right,
+    green 0%,
+    green 50%,
+    #dbe6fd 50%,
+    #dbe6fd 100%
+  );
+}
+
+.sub-stacks-card.nodejs:hover {
+  background-color: lime;
+}
+.sub-stacks-card.git:hover {
+  background-color: purple;
 }
 
 /* Projects */
