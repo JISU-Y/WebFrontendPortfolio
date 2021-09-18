@@ -6,6 +6,7 @@ const htmlIcon = document.querySelector(".fa-html5");
 const cssIcon = document.querySelector(".fa-css3");
 const jsIcon = document.querySelector(".fa-js");
 const reactIcon = document.querySelector(".fa-react");
+const subStacksCard = document.querySelectorAll(".sub-stacks-card");
 
 const home_lines = document.querySelectorAll(".home-wrap .line");
 window.addEventListener("DOMContentLoaded", function () {

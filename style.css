@@ -224,17 +224,19 @@ body {
 
 .home-bottom-container .down {
   position: absolute;
-  bottom: 35px;
+  bottom: 17px;
   left: 50%;
   width: 40px;
   height: auto;
   cursor: pointer;
-  transform: translate(-110%, -10%);
+  transform: translate(-70%, -10%);
   transition: 1s ease-in-out;
+  padding: 20px;
+  box-sizing: content-box;
 }
 
 .home-bottom-container .down:hover {
-  transform: translate(-80%, 20%) rotate(120deg);
+  transform: translate(-60%, 20%) rotate(120deg);
 }
 
 /* .wrap {
@@ -267,6 +269,7 @@ body {
   align-items: center;
   width: 100%;
   height: 80vh;
+  min-height: 770px;
   margin-top: 20px;
   padding: 6px 3px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
@@ -292,6 +295,7 @@ body {
 
 .main-container .details .details-wrap img {
   width: 50%;
+  min-width: 100px;
   margin-bottom: 20px;
 }
 
@@ -478,11 +482,11 @@ body {
 .preview-projects .image-container {
   display: flex;
   position: absolute;
-  top: 0;
+  top: -10%;
   left: 0;
   /* project 추가하면 바꿔야함... */
   width: calc(100% * 5);
-  height: 100%;
+  height: 120%;
   opacity: 0;
   transition: all 0.3s ease-in;
 }
@@ -496,7 +500,7 @@ body {
 .preview-projects .image-container .each-image {
   display: none;
   /* project 추가하면 바꿔야함... */
-  width: calc(100% / 5);
+  width: 50%;
   height: auto;
   flex-direction: column;
   justify-content: center;
@@ -506,9 +510,14 @@ body {
 }
 
 .preview .preview-projects .image-container .each-image img {
-  width: 100%;
+  width: 200%;
   height: 100%;
   margin-top: 5%;
+}
+
+.preview .preview-projects .image-container .each-image strong {
+  width: 200%;
+  word-break: keep-all;
 }
 
 .main-container .preview .preview-projects:hover .buttons-container {
@@ -684,7 +693,7 @@ body {
   background: #dbe6fd;
 }
 
-.sub-stacks-card.mongodb:hover {
+/* .sub-stacks-card.mongodb:hover {
   background: linear-gradient(
     to right,
     green 0%,
@@ -692,7 +701,7 @@ body {
     #dbe6fd 50%,
     #dbe6fd 100%
   );
-}
+} */
 
 .sub-stacks-card.nodejs:hover {
   background-color: lime;
