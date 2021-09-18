@@ -2,11 +2,6 @@ const previews = document.querySelectorAll(".preview");
 const previewSkill = document.querySelector(".preview-skills");
 const previewProject = document.querySelector(".preview-projects");
 const previewContact = document.querySelector(".preview-contacts");
-const htmlIcon = document.querySelector(".fa-html5");
-const cssIcon = document.querySelector(".fa-css3");
-const jsIcon = document.querySelector(".fa-js");
-const reactIcon = document.querySelector(".fa-react");
-const subStacksCard = document.querySelectorAll(".sub-stacks-card");
 
 const home_lines = document.querySelectorAll(".home-wrap .line");
 window.addEventListener("DOMContentLoaded", function () {
@@ -47,53 +42,6 @@ function scrollIntoView(selector) {
   }
   scrollTo.scrollIntoView({ behavior: "smooth" });
 }
-
-// skills에 마우스 올리면 효과
-htmlIcon.addEventListener("mouseover", () => {
-  htmlIcon.classList.add("checked");
-  cssIcon.classList.add("checked");
-});
-
-cssIcon.addEventListener("mouseover", () => {
-  htmlIcon.classList.add("checked");
-  cssIcon.classList.add("checked");
-});
-
-jsIcon.addEventListener("mouseover", () => {
-  htmlIcon.classList.add("checked");
-  cssIcon.classList.add("checked");
-  jsIcon.classList.add("checked");
-});
-
-reactIcon.addEventListener("mouseover", () => {
-  htmlIcon.classList.add("checked");
-  cssIcon.classList.add("checked");
-  jsIcon.classList.add("checked");
-  reactIcon.classList.add("checked");
-});
-
-htmlIcon.addEventListener("mouseleave", () => {
-  htmlIcon.classList.remove("checked");
-  cssIcon.classList.remove("checked");
-});
-
-cssIcon.addEventListener("mouseleave", () => {
-  htmlIcon.classList.remove("checked");
-  cssIcon.classList.remove("checked");
-});
-
-jsIcon.addEventListener("mouseleave", () => {
-  htmlIcon.classList.remove("checked");
-  cssIcon.classList.remove("checked");
-  jsIcon.classList.remove("checked");
-});
-
-reactIcon.addEventListener("mouseleave", () => {
-  htmlIcon.classList.remove("checked");
-  cssIcon.classList.remove("checked");
-  jsIcon.classList.remove("checked");
-  reactIcon.classList.remove("checked");
-});
 
 // projects
 const projectBtnContainer = document.querySelector(".project-categories");
