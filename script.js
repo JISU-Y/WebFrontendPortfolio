@@ -47,7 +47,7 @@ function scrollIntoView(selector) {
 const projectBtnContainer = document.querySelector(".project-categories");
 const projectListContainer = document.querySelector(".project-list");
 const projectsListWrapContainer = document.querySelector(".projects-list-wrap");
-const projectResults = document.querySelectorAll(".project-result");
+const projectResults = document.querySelectorAll(".project-each");
 
 projectBtnContainer.addEventListener("click", (e) => {
   const filter = e.target.dataset.filter;

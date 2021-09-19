@@ -834,90 +834,57 @@ body {
   transition: all 0.5s ease;
 }
 
-.projects-container .project-list .project-title {
-  margin-bottom: 20px;
-  font-size: 20px;
-  display: none;
-}
-
-.projects-container .project-list .project-result {
+.project-list .projects-list-wrap .project-each {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  font-size: 50px;
-  margin: 20px 0;
-  padding: 20px 30px;
-  /* border-bottom: 1.5px solid slategray; */
+  justify-content: center;
+  width: 90%;
+  border: #333 1px solid;
+  border-radius: 10px;
+  padding: 30px 0;
+  margin-top: 30px;
 }
 
-.projects-container .project-list .project-result.invisible {
-  display: none;
+.project-each .image-container-left .each-project-img {
+  width: 200px;
+  height: 270px;
+  cursor: pointer;
 }
 
-.projects-container .project-list .project-result.anim-out {
-  opacity: 0;
-}
-
-.project-result .design-result {
-  position: relative;
-}
-
-.project-result .design-result .project-description {
-  /* description도 project 박스 안에서
-  자리를 차지하는 클래스 이기 때문에
-  마우스가 올라갔을 때 description이 전체적인 박스에
-  나타내려고 한다면
-  그 자리를 벗어나서 덮어져야 하므로
-  absolute로 해준다. */
-  position: absolute;
-  background-color: black;
+.project-each .des-container-right {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  font-size: medium;
-  transform: translateY(10px);
-  transition: all 0.5s ease-in;
-  padding: 10px;
-}
-
-.design-result:hover .project-description {
-  transform: translateY(0px);
-  opacity: 0.8;
-}
-
-.project-description h3 {
-  color: orange;
-}
-
-.project-description h3:after {
-  content: "";
-  display: block;
+  justify-content: space-around;
+  margin-left: 50px;
+  max-width: 500px;
   position: relative;
-  left: 50%;
-  width: 15%;
-  height: 2px;
-  margin-left: -12px;
-  margin-top: 8px;
-  background-color: gray;
 }
 
-.project-description span {
+.project-each .des-container-right .each-project-tag {
+  position: absolute;
+  top: 0;
+  right: 0;
   font-size: 15px;
-  font-weight: bold;
-  color: deeppink;
+  padding: 5px 10px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 5px;
 }
 
-.project-list .project-result img {
-  width: 150px;
-  height: 200px;
-  margin: 0 40px;
+.project-each .des-container-right .each-project-stacks span {
+  font-size: 17px;
+  padding: 5px 15px;
+  background-color: #fff;
+  color: #333;
+  border-radius: 30px;
+  margin-right: 10px;
+}
+
+.project-list .projects-list-wrap .project-each.invisible {
+  display: none;
+}
+
+.project-list .projects-list-wrap .project-each.anim-out {
+  opacity: 0;
 }
 
 /* Contact */
