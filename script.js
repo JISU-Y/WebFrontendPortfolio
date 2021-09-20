@@ -8,10 +8,6 @@ window.addEventListener("DOMContentLoaded", function () {
   home_lines.forEach((line) => (line.style.width = "400px"));
 });
 
-const downBtn = document.querySelector(".down");
-
-downBtn.addEventListener("click", () => scrollIntoView("#main"));
-
 // preview에서 선택하는대로 해당 section으로 스크롤 이동
 previews.forEach((preview) => {
   preview.addEventListener("click", (event) => {
@@ -342,3 +338,28 @@ function collisionDetection(b) {
     }
   }
 }
+
+const homeInfo = document.querySelector(".home-info");
+const helloSign = document.querySelector(".hello");
+
+homeInfo.addEventListener("animationstart", () => {
+  helloSign.style.display = "none";
+});
+
+homeInfo.addEventListener("animationend", () => {
+  homeInfo.innerHTML = `
+  <h1>YOO JISU</h1>
+  <div class="line"></div>
+  <h3>
+    안녕하세요.
+    <br />
+    <br />
+    프론트엔드 신입 개발자 유지수입니다.
+  </h3>
+  <div class="line"></div>
+  `;
+  homeInfo.style.backgroundColor = `#5cd3ad`;
+  homeInfo.style.color = `#fff`;
+});
+
+// full page scroll
