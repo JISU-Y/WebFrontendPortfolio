@@ -330,6 +330,8 @@ body {
 .main-container .details .details-description-wrap .my-description {
   margin-bottom: 5%;
   line-height: 200%;
+  font-size: 17px;
+  word-break: keep-all;
 }
 
 .main .main-container .details .btn-resume {
@@ -648,12 +650,14 @@ body {
   width: 100%;
   height: 100%;
   text-align: center;
-  transition: transform 0.8s;
+  transition: transform 1s;
+  transition-delay: 3s;
   transform-style: preserve-3d;
 }
 
 .skill-card:hover .flip-card-inner {
   transform: rotateY(180deg);
+  transition: transform 0.8s;
 }
 
 .flip-card-front,
@@ -1141,6 +1145,7 @@ body {
     width: 100%;
     height: 40%;
     justify-content: space-around;
+    align-items: center;
     margin: 0 0 20px 0;
     padding: 0;
   }
@@ -1155,7 +1160,7 @@ body {
   .main-container .details .details-wrap img {
     width: 20%;
     height: auto;
-    margin-right: 10px;
+    margin: 10px;
   }
 
   .main-container .details .details-description-wrap {
