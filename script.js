@@ -140,6 +140,28 @@ arrowUp.addEventListener("click", () => {
   scrollIntoView("#main");
 });
 
+// scroll reveal
+ScrollReveal({ reset: true });
+
+ScrollReveal().reveal(".show-once", {
+  reset: false,
+});
+
+ScrollReveal().reveal(".slide-left", {
+  duration: 1000,
+  origin: "right",
+  distance: "300px",
+  easing: "ease-in-out",
+  delay: 375,
+});
+
+ScrollReveal().reveal(".slide-right", {
+  duration: 2000,
+  origin: "left",
+  distance: "300px",
+  easing: "ease-in-out",
+});
+
 // home animation
 var c = document.getElementById("canvas");
 var ctx = c.getContext("2d");
