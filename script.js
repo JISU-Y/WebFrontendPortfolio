@@ -146,7 +146,7 @@ ScrollReveal().reveal(".show-once", {
 ScrollReveal().reveal(".slide-left", {
   duration: 1000,
   origin: "right",
-  distance: "300px",
+  distance: "500px",
   easing: "ease-in-out",
   delay: 375,
 });
@@ -154,7 +154,7 @@ ScrollReveal().reveal(".slide-left", {
 ScrollReveal().reveal(".slide-right", {
   duration: 2000,
   origin: "left",
-  distance: "300px",
+  distance: "500px",
   easing: "ease-in-out",
 });
 
@@ -363,8 +363,14 @@ homeInfo.addEventListener("animationend", () => {
 });
 
 // full page scroll
-new fullpage("#fullpage", {
-  //options here
-  autoScrolling: true,
-  scrollHorizontally: true,
+// new fullpage("#fullpage", {
+//   //options here
+//   autoScrolling: true,
+//   scrollHorizontally: true,
+// });
+fullpage.initialize("#fullpage", {
+  anchors: ["firstPage", "secondPage", "3rdPage", "4thpage", "lastPage"],
+  menu: "#menu",
+  css3: false,
+  scrollBar: true,
 });

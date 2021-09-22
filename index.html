@@ -10,21 +10,23 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
     <link rel="stylesheet" href="style.css" />
     <!-- full page scroll -->
     <link rel="stylesheet" type="text/css" href="javascript.fullPage.css" />
+    <script type="text/javascript" src="javascript.fullPage.js"></script>
   </head>
   <body>
     <div id="fullpage">
       <!-- Home(Start) -->
-      <div class="section home-wrap">
+      <section class="section home-wrap">
         <canvas id="canvas"></canvas>
         <div class="home-info">
           <h1 class="hello">HELLO</h1>
         </div>
-      </div>
+      </section>
       <!-- Main -->
-      <div id="main" class="section main">
+      <section id="main" class="section main">
         <div class="wrap">
           <h1 class="slide-right">RESUME</h1>
           <div class="main-container slide-left">
@@ -143,7 +145,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </section>
       <!-- Skills -->
       <section id="skills" class="section skills">
         <div class="wrap">
@@ -435,28 +437,15 @@
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <!-- 라인 추가 -->
-      <section class="section contact-links">
-        <div class="wrap">
-          <div class="contact-image-container">
-            <img src="icons/bermuda-252.png" alt="house" class="house1" />
-            <img src="icons/pablo-smart-house.png" alt="house" class="house2" />
-            <img
-              src="icons/bermuda-veterinary-clinic.png"
-              alt="house"
-              class="house3"
-            />
-            <img src="icons/hugo-171.png" alt="card" class="building" />
+          <div class="contact-links">
+            <a href="https://github.com/JISU-Y" target="blank">
+              <i class="fab fa-github-square"></i>
+            </a>
+            <a href="https://www.rocketpunch.com/@jisu129" target="blank">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <p class="contact__rights">2021 JISU - All rights reserved</p>
           </div>
-          <a href="https://github.com/JISU-Y" target="blank">
-            <i class="fab fa-github-square"></i>
-          </a>
-          <a href="https://www.rocketpunch.com/@jisu129" target="blank">
-            <i class="fab fa-linkedin"></i>
-          </a>
-          <p class="contact__rights">2021 JISU - All rights reserved</p>
         </div>
       </section>
     </div>
@@ -466,9 +455,6 @@
       <img src="icons/clip-638.png" alt="" />
       <img src="icons/bermuda-372.png" alt="" class="flame" />
     </button>
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script type="text/javascript" src="javascript.fullPage.js"></script>
-
-    <script src="script.js"></script>
+    <script type="text/JavaScript" src="script.js"></script>
   </body>
 </html>
