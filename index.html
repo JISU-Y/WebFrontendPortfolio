@@ -11,448 +11,455 @@
     ></script>
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
     <link rel="stylesheet" href="style.css" />
+    <!-- full page scroll -->
+    <link rel="stylesheet" type="text/css" href="javascript.fullPage.css" />
   </head>
   <body>
-    <canvas id="canvas"></canvas>
-    <!-- Home(Start) -->
-    <div class="home-wrap">
-      <div class="home-info">
-        <h1 class="hello">HELLO</h1>
+    <div id="fullpage">
+      <!-- Home(Start) -->
+      <div class="section home-wrap">
+        <canvas id="canvas"></canvas>
+        <div class="home-info">
+          <h1 class="hello">HELLO</h1>
+        </div>
       </div>
-    </div>
-    <!-- Main -->
-    <section id="main" class="section main">
-      <div class="wrap">
-        <h1 class="slide-right">RESUME</h1>
-        <div class="main-container slide-left">
-          <div class="details">
-            <div class="details-wrap">
-              <img src="imgs/Profile.jpg" alt="" />
-              <ul class="my-info">
-                <!-- <li><span>이름: ㅇㅇㅇ</span></li>
+      <!-- Main -->
+      <div id="main" class="section main">
+        <div class="wrap">
+          <h1 class="slide-right">RESUME</h1>
+          <div class="main-container slide-left">
+            <div class="details">
+              <div class="details-wrap">
+                <img src="imgs/Profile.jpg" alt="" />
+                <ul class="my-info">
+                  <!-- <li><span>이름: ㅇㅇㅇ</span></li>
                 <li><span>생년월일: 0000-00-00</span></li>
                 <li><span>나이: 만 00세</span></li>
                 <li><span>주소: ㅇㅇㅇ ㅇㅇㅇ ㅇㅇㅇ ㅇㅇㅇ</span></li>
                 <li><span>학력: ㅇㅇㅇㅇㅇ ㅇㅇㅇㅇㅇ ㅇㅇ</span></li> -->
-                <li><span>이름: 유지수</span></li>
-                <li><span>생년월일: 1995-02-20</span></li>
-                <li><span>나이: 만 26세</span></li>
-                <li><span>주소: 경기도 안산시 단원구</span></li>
-                <li><span>학력: 국민대학교 전자공학부 졸업('19년)</span></li>
-              </ul>
-            </div>
-            <div class="details-description-wrap">
-              <p class="my-description">
-                <span
-                  >안녕하세요, <br />
-                  신입 프론트엔드 개발자 유지수입니다.</span
-                >
-                <br />
-                <br />
-                전자공학도로서 여러 토이 프로젝트를 진행해보며 만든 결과물에
-                뿌듯함과 성취감을 느껴왔습니다.<br />
-                하지만 HW 부품없이 내가 원하는 것을 만들 수는 없을까?<br />
-                라는 질문에서부터 시작하여 웹 프론트엔드에 대해 알아가기
-                시작했고,<br />
-                단기간이지만 5개월이라는 시간동안 스스로 해야할 것을 파악해가며
-                나아가고 있습니다.<br /><br />
-                개발자로 성장함에 있어 꾸준함을 무기로 성장해 나가겠습니다.
-              </p>
-              <button class="btn-resume">이력서 다운</button>
-            </div>
-          </div>
-          <p class="preview-title">Previews</p>
-          <div class="preview">
-            <div class="preview-skills" data-set="#skills">
-              <span class="this">Skills</span>
-              <div class="skillbox left">
-                <i class="fab fa-html5"> HTML</i>
-                <i class="fab fa-css3"> CSS</i>
+                  <li><span>이름: 유지수</span></li>
+                  <li><span>생년월일: 1995-02-20</span></li>
+                  <li><span>나이: 만 26세</span></li>
+                  <li><span>주소: 경기도 안산시 단원구</span></li>
+                  <li><span>학력: 국민대학교 전자공학부 졸업('19년)</span></li>
+                </ul>
               </div>
-              <div class="skillbox right">
-                <div class="skillbox top">
-                  <i class="fab fa-js-square"> Javascript</i>
-                </div>
-                <div class="skillbox bot">
-                  <div class="skillbox left">
-                    <i class="fas fa-database"> MongoDB</i>
-                  </div>
-                  <div class="skillbox right">
-                    <i class="fab fa-react"> React</i>
-                  </div>
-                </div>
+              <div class="details-description-wrap">
+                <p class="my-description">
+                  <span
+                    >안녕하세요, <br />
+                    신입 프론트엔드 개발자 유지수입니다.</span
+                  >
+                  <br />
+                  <br />
+                  전자공학도로서 여러 토이 프로젝트를 진행해보며 만든 결과물에
+                  뿌듯함과 성취감을 느껴왔습니다.<br />
+                  하지만 HW 부품없이 내가 원하는 것을 만들 수는 없을까?<br />
+                  라는 질문에서부터 시작하여 웹 프론트엔드에 대해 알아가기
+                  시작했고,<br />
+                  단기간이지만 5개월이라는 시간동안 스스로 해야할 것을
+                  파악해가며 나아가고 있습니다.<br /><br />
+                  개발자로 성장함에 있어 꾸준함을 무기로 성장해 나가겠습니다.
+                </p>
+                <button class="btn-resume">이력서 다운</button>
               </div>
             </div>
-            <div class="preview-projects" data-set="#projects">
-              <span class="this">Projects</span>
-              <!-- day18 day35 참고 -->
-              <div class="image-container">
-                <div class="each-image">
-                  <strong>MarkUp</strong>
-                  <img src="imgs/yogaSiteMarkup.jpg" alt="yoga-site" />
+            <p class="preview-title">Previews</p>
+            <div class="preview">
+              <div class="preview-skills" data-set="#skills">
+                <span class="this">Skills</span>
+                <div class="skillbox left">
+                  <i class="fab fa-html5"> HTML</i>
+                  <i class="fab fa-css3"> CSS</i>
                 </div>
-                <div class="each-image">
-                  <strong>MarkUp</strong>
-                  <img src="imgs/snowSiteMarkup3.JPG" alt="snow-site" />
-                </div>
-                <div class="each-image">
-                  <strong>MarkUp</strong>
-                  <img src="imgs/AgataSiteMarkup_small.JPG" alt="agata-site" />
-                </div>
-                <div class="each-image">
-                  <strong>Active Web</strong>
-                  <img src="imgs/webproject1.PNG" alt="webproject1" />
-                </div>
-                <div class="each-image">
-                  <strong>React</strong>
-                  <img src="imgs/webproject1.PNG" alt="reactproject1" />
-                </div>
-              </div>
-              <div class="buttons-container">
-                <button id="left" class="btn">
-                  <i class="fas fa-caret-left"></i>
-                </button>
-                <button id="right" class="btn">
-                  <i class="fas fa-caret-right"></i>
-                </button>
-              </div>
-            </div>
-            <div class="preview-contacts" data-set="#contact">
-              <span class="this">Contacts</span>
-              <div class="icons">
-                <i class="fas fa-mobile-alt icon"></i>
-                <i class="far fa-envelope icon"></i>
-                <span
-                  class="iconify icon"
-                  data-icon="vs-kakaotalk"
-                  data-inline="false"
-                ></span>
-              </div>
-              <div class="contents">
-                <span>010-6490-6210</span>
-                <span>jisu129@<br />gmail.com</span>
-                <span>JISUY</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Skills -->
-    <section id="skills" class="section skills">
-      <div class="wrap">
-        <h1>Skills</h1>
-        <div class="main-stacks">
-          <h4 class="main-stacks-title">Main-Stacks</h4>
-          <div class="skills-container">
-            <div class="container-divide-hc">
-              <div class="skill-card html">
-                <div class="flip-card-inner">
-                  <div class="flip-card-front html">
-                    <i class="fab fa-html5"></i>HTML
+                <div class="skillbox right">
+                  <div class="skillbox top">
+                    <i class="fab fa-js-square"> Javascript</i>
                   </div>
-                  <div class="flip-card-back">
-                    <p>
-                      HTML/CSS를 이용하여 주어진 디자인 <br />
-                      레이아웃에 따라 웹 구성 가능
-                    </p>
+                  <div class="skillbox bot">
+                    <div class="skillbox left">
+                      <i class="fas fa-database"> MongoDB</i>
+                    </div>
+                    <div class="skillbox right">
+                      <i class="fab fa-react"> React</i>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="skill-card css">
-                <div class="flip-card-inner">
-                  <div class="flip-card-front css">
-                    <i class="fab fa-css3"></i>CSS
+              <div class="preview-projects" data-set="#projects">
+                <span class="this">Projects</span>
+                <!-- day18 day35 참고 -->
+                <div class="image-container">
+                  <div class="each-image">
+                    <strong>MarkUp</strong>
+                    <img src="imgs/yogaSiteMarkup.jpg" alt="yoga-site" />
                   </div>
-                  <div class="flip-card-back">
-                    <p>CSS Media Query를 이용하여 반응형 웹 구현 가능</p>
+                  <div class="each-image">
+                    <strong>MarkUp</strong>
+                    <img src="imgs/snowSiteMarkup3.JPG" alt="snow-site" />
                   </div>
-                </div>
-              </div>
-            </div>
-            <div class="container-divide-jr">
-              <div class="skill-card js">
-                <div class="flip-card-inner">
-                  <div class="flip-card-front js">
-                    <i class="fab fa-js"></i>Vanila JS
+                  <div class="each-image">
+                    <strong>MarkUp</strong>
+                    <img
+                      src="imgs/AgataSiteMarkup_small.JPG"
+                      alt="agata-site"
+                    />
                   </div>
-                  <div class="flip-card-back">
-                    <p>
-                      ES6 문법 사용<br />
-                      DOM 객체를 제어하여 동적 사이트 구현 가능
-                    </p>
+                  <div class="each-image">
+                    <strong>Active Web</strong>
+                    <img src="imgs/webproject1.PNG" alt="webproject1" />
                   </div>
-                </div>
-              </div>
-              <div class="skill-card react">
-                <div class="flip-card-inner">
-                  <div class="flip-card-front react">
-                    <i class="fab fa-react"></i>React
-                  </div>
-                  <div class="flip-card-back">
-                    <p>
-                      Redux 사용 경험, 프로젝트에 적용하며 현재 공부 중<br />
-                      Express/MongoDB를 연동하여 Client와 Server단 구성 가능
-                    </p>
+                  <div class="each-image">
+                    <strong>React</strong>
+                    <img src="imgs/webproject1.PNG" alt="reactproject1" />
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="sub-stacks">
-          <h4 class="sub-stacks-title">Sub-Stacks and more</h4>
-          <div class="sub-stacks-container">
-            <div class="sub-stacks-card mongodb">
-              <i class="fas fa-database"></i>MongoDB<br />(Mongoose)
-            </div>
-            <div class="sub-stacks-card nodejs">
-              <i class="fab fa-node-js"></i>Node.js<br />(express)
-            </div>
-            <div class="sub-stacks-card git">
-              <i class="fab fa-github"></i>Git/Github
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Projects -->
-    <section id="projects" class="section projects">
-      <div class="wrap">
-        <h1>Projects</h1>
-        <!-- <h3>Front-end projects</h3> -->
-        <!-- project 항목 선택(마크업 / 동적 웹사이트 / 리액트 웹앱 프로젝트) -->
-        <div class="projects-container">
-          <div class="project-categories">
-            <button class="category-btn all selected" data-filter="*">
-              All
-            </button>
-            <button class="category-btn mark-up" data-filter="Mark-up">
-              Mark Up
-            </button>
-            <button class="category-btn active-web" data-filter="Active-web">
-              Active Web Site
-            </button>
-            <button class="category-btn react-web" data-filter="React-web">
-              React Web App
-            </button>
-          </div>
-          <!-- 항목에 따른 projects 리스트들 -->
-          <div class="project-list">
-            <div class="projects-list-wrap">
-              <!-- mark up 1 -->
-              <div class="project-each" data-type="Mark-up">
-                <a
-                  href="https://jisu-y.github.io/Yoga-web-site/"
-                  class="image-container-left"
-                  target="blank"
-                >
-                  <img
-                    src="imgs/yogaSiteMarkup.jpg"
-                    alt="yogasite-result"
-                    class="each-project-img"
-                  />
-                  <img
-                    src="videos/Yoga Site - Chrome 2021-09-20 13-24-20.gif"
-                    alt="yogasite-result"
-                    class="each-project-gif"
-                  />
-                </a>
-                <div class="des-container-right">
-                  <h4 class="each-project-title">디자인 시안 1 마크업</h4>
-                  <div class="each-project-description">
-                    <span
-                      >Yoga Site Mark Up Porject. From an image template to a
-                      resposive web site.</span
-                    >
-                  </div>
-                  <span class="each-project-tag">Mark up</span>
-                  <div class="each-project-stacks">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                  </div>
+                <div class="buttons-container">
+                  <button id="left" class="btn">
+                    <i class="fas fa-caret-left"></i>
+                  </button>
+                  <button id="right" class="btn">
+                    <i class="fas fa-caret-right"></i>
+                  </button>
                 </div>
               </div>
-              <!-- mark up 2 -->
-              <div class="project-each" data-type="Mark-up">
-                <a
-                  href="https://jisu-y.github.io/Snow_website/"
-                  class="image-container-left"
-                  target="blank"
-                >
-                  <img
-                    src="imgs/snowSiteMarkup3.JPG"
-                    alt="design1-result"
-                    class="each-project-img"
-                  />
-                  <img
-                    src="videos/Snow website - Chrome 2021-09-20 13-49-34.gif"
-                    alt="yogasite-result"
-                    class="each-project-gif"
-                  />
-                </a>
-                <div class="des-container-right">
-                  <h4 class="project-title">디자인 시안 2 마크업</h4>
-                  <div class="each-project-description">
-                    <span
-                      >Snow Site(an agency portfolio template) Mark Up Porject.
-                      From a template to a resposive web site.</span
-                    >
-                  </div>
-                  <span class="each-project-tag">Mark up</span>
-                  <div class="each-project-stacks">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                  </div>
+              <div class="preview-contacts" data-set="#contact">
+                <span class="this">Contacts</span>
+                <div class="icons">
+                  <i class="fas fa-mobile-alt icon"></i>
+                  <i class="far fa-envelope icon"></i>
+                  <span
+                    class="iconify icon"
+                    data-icon="vs-kakaotalk"
+                    data-inline="false"
+                  ></span>
                 </div>
-              </div>
-              <!-- mark up 3 -->
-              <div class="project-each" data-type="Mark-up">
-                <a
-                  href="https://jisu-y.github.io/AgataBielen-web-site/"
-                  class="image-container-left"
-                  target="blank"
-                >
-                  <img
-                    src="imgs/AgataSiteMarkup_small.JPG"
-                    alt="Agata-result_small"
-                    class="each-project-img"
-                  />
-                  <img
-                    src="videos/Agata Bielen - Chrome 2021-09-20 13-50-59.gif"
-                    alt="yogasite-result"
-                    class="each-project-gif"
-                  />
-                </a>
-                <div class="des-container-right">
-                  <h4 class="project-title">디자인 시안 3 마크업</h4>
-                  <div class="each-project-description">
-                    <span
-                      >Agata Bielen Site Mark Up Porject. From an image template
-                      to a resposive web site.</span
-                    >
-                  </div>
-                  <span class="each-project-tag">Mark up</span>
-                  <div class="each-project-stacks">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                  </div>
-                </div>
-              </div>
-              <!-- when & where -->
-              <div class="project-each" data-type="Active-web">
-                <a
-                  href="http://unnatural-legs.surge.sh/"
-                  class="image-container-left"
-                  target="blank"
-                >
-                  <img
-                    src="imgs/webproject1.PNG"
-                    alt="design1-result"
-                    class="each-project-img"
-                  />
-                  <img
-                    src="videos/My Weather for Travel App - Chrome 2021-07-03 21-31-10.gif"
-                    alt="yogasite-result"
-                    class="each-project-gif"
-                  />
-                </a>
-                <div class="des-container-right">
-                  <h4 class="project-title">
-                    반응형 웹사이트 with JS / When & Where?
-                  </h4>
-                  <div class="each-project-description">
-                    <span
-                      >세계 여행에 필요한 월별 기후를 알려주는 Web site</span
-                    >
-                  </div>
-                  <span class="each-project-tag">Active Web</span>
-                  <div class="each-project-stacks">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>Vanila JS</span>
-                  </div>
-                </div>
-              </div>
-              <!-- react app -->
-              <div class="project-each" data-type="React-web">
-                <a href="" class="image-container-left" target="blank">
-                  <img src="imgs/user1.png" alt="" class="each-project-img" />
-                  <img
-                    src="videos/Yoga Site - Chrome 2021-09-20 13-24-20.gif"
-                    alt="yogasite-result"
-                    class="each-project-gif"
-                  />
-                </a>
-                <div class="des-container-right">
-                  <h4 class="project-title">React Web App</h4>
-                  <div class="each-project-description">
-                    <span>clone coding with java and android3</span>
-                  </div>
-                  <span class="each-project-tag">React-web-app</span>
-                  <div class="each-project-stacks">
-                    <span>React</span>
-                    <span>Express</span>
-                    <span>Mongoose</span>
-                  </div>
+                <div class="contents">
+                  <span>010-6490-6210</span>
+                  <span>jisu129@<br />gmail.com</span>
+                  <span>JISUY</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
-    <!-- Contact -->
-    <section id="contact" class="section contact">
-      <div class="wrap">
-        <h1>Contact</h1>
-        <div class="contact-container">
-          <div class="contact-info">
-            <div class="info-wrap">
-              <h3>Info.</h3>
-              <div class="info email">
-                <i class="far fa-envelope icon"></i>
-                <a href="#">jisu129@gmail.com</a>
+      <!-- Skills -->
+      <section id="skills" class="section skills">
+        <div class="wrap">
+          <h1>Skills</h1>
+          <div class="main-stacks">
+            <h4 class="main-stacks-title">Main-Stacks</h4>
+            <div class="skills-container">
+              <div class="container-divide-hc">
+                <div class="skill-card html">
+                  <div class="flip-card-inner">
+                    <div class="flip-card-front html">
+                      <i class="fab fa-html5"></i>HTML
+                    </div>
+                    <div class="flip-card-back">
+                      <p>
+                        HTML/CSS를 이용하여 주어진 디자인 <br />
+                        레이아웃에 따라 웹 구성 가능
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="skill-card css">
+                  <div class="flip-card-inner">
+                    <div class="flip-card-front css">
+                      <i class="fab fa-css3"></i>CSS
+                    </div>
+                    <div class="flip-card-back">
+                      <p>CSS Media Query를 이용하여 반응형 웹 구현 가능</p>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="info mobile">
-                <i class="fas fa-mobile-alt icon"></i>
-                <p>010-6490-6210</p>
+              <div class="container-divide-jr">
+                <div class="skill-card js">
+                  <div class="flip-card-inner">
+                    <div class="flip-card-front js">
+                      <i class="fab fa-js"></i>Vanila JS
+                    </div>
+                    <div class="flip-card-back">
+                      <p>
+                        ES6 문법 사용<br />
+                        DOM 객체를 제어하여 동적 사이트 구현 가능
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="skill-card react">
+                  <div class="flip-card-inner">
+                    <div class="flip-card-front react">
+                      <i class="fab fa-react"></i>React
+                    </div>
+                    <div class="flip-card-back">
+                      <p>
+                        Redux 사용 경험, 프로젝트에 적용하며 현재 공부 중<br />
+                        Express/MongoDB를 연동하여 Client와 Server단 구성 가능
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="info kktalk">
-                <span
-                  class="iconify icon"
-                  data-icon="vs-kakaotalk"
-                  data-inline="false"
-                ></span>
-                <p>JISUY</p>
+            </div>
+          </div>
+          <div class="sub-stacks">
+            <h4 class="sub-stacks-title">Sub-Stacks and more</h4>
+            <div class="sub-stacks-container">
+              <div class="sub-stacks-card mongodb">
+                <i class="fas fa-database"></i>MongoDB<br />(Mongoose)
+              </div>
+              <div class="sub-stacks-card nodejs">
+                <i class="fab fa-node-js"></i>Node.js<br />(express)
+              </div>
+              <div class="sub-stacks-card git">
+                <i class="fab fa-github"></i>Git/Github
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <!-- 라인 추가 -->
-    <section class="section contact-links">
-      <div class="wrap">
-        <div class="contact-image-container">
-          <img src="icons/bermuda-252.png" alt="house" class="house1" />
-          <img src="icons/pablo-smart-house.png" alt="house" class="house2" />
-          <img
-            src="icons/bermuda-veterinary-clinic.png"
-            alt="house"
-            class="house3"
-          />
-          <img src="icons/hugo-171.png" alt="card" class="building" />
+      </section>
+      <!-- Projects -->
+      <section id="projects" class="section projects">
+        <div class="wrap">
+          <h1>Projects</h1>
+          <!-- <h3>Front-end projects</h3> -->
+          <!-- project 항목 선택(마크업 / 동적 웹사이트 / 리액트 웹앱 프로젝트) -->
+          <div class="projects-container">
+            <div class="project-categories">
+              <button class="category-btn all selected" data-filter="*">
+                All
+              </button>
+              <button class="category-btn mark-up" data-filter="Mark-up">
+                Mark Up
+              </button>
+              <button class="category-btn active-web" data-filter="Active-web">
+                Active Web Site
+              </button>
+              <button class="category-btn react-web" data-filter="React-web">
+                React Web App
+              </button>
+            </div>
+            <!-- 항목에 따른 projects 리스트들 -->
+            <div class="project-list">
+              <div class="projects-list-wrap">
+                <!-- mark up 1 -->
+                <div class="project-each" data-type="Mark-up">
+                  <a
+                    href="https://jisu-y.github.io/Yoga-web-site/"
+                    class="image-container-left"
+                    target="blank"
+                  >
+                    <img
+                      src="imgs/yogaSiteMarkup.jpg"
+                      alt="yogasite-result"
+                      class="each-project-img"
+                    />
+                    <img
+                      src="videos/Yoga Site - Chrome 2021-09-20 13-24-20.gif"
+                      alt="yogasite-result"
+                      class="each-project-gif"
+                    />
+                  </a>
+                  <div class="des-container-right">
+                    <h4 class="each-project-title">디자인 시안 1 마크업</h4>
+                    <div class="each-project-description">
+                      <span
+                        >Yoga Site Mark Up Porject. From an image template to a
+                        resposive web site.</span
+                      >
+                    </div>
+                    <span class="each-project-tag">Mark up</span>
+                    <div class="each-project-stacks">
+                      <span>HTML</span>
+                      <span>CSS</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- mark up 2 -->
+                <div class="project-each" data-type="Mark-up">
+                  <a
+                    href="https://jisu-y.github.io/Snow_website/"
+                    class="image-container-left"
+                    target="blank"
+                  >
+                    <img
+                      src="imgs/snowSiteMarkup3.JPG"
+                      alt="design1-result"
+                      class="each-project-img"
+                    />
+                    <img
+                      src="videos/Snow website - Chrome 2021-09-20 13-49-34.gif"
+                      alt="yogasite-result"
+                      class="each-project-gif"
+                    />
+                  </a>
+                  <div class="des-container-right">
+                    <h4 class="project-title">디자인 시안 2 마크업</h4>
+                    <div class="each-project-description">
+                      <span
+                        >Snow Site(an agency portfolio template) Mark Up
+                        Porject. From a template to a resposive web site.</span
+                      >
+                    </div>
+                    <span class="each-project-tag">Mark up</span>
+                    <div class="each-project-stacks">
+                      <span>HTML</span>
+                      <span>CSS</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- mark up 3 -->
+                <div class="project-each" data-type="Mark-up">
+                  <a
+                    href="https://jisu-y.github.io/AgataBielen-web-site/"
+                    class="image-container-left"
+                    target="blank"
+                  >
+                    <img
+                      src="imgs/AgataSiteMarkup_small.JPG"
+                      alt="Agata-result_small"
+                      class="each-project-img"
+                    />
+                    <img
+                      src="videos/Agata Bielen - Chrome 2021-09-20 13-50-59.gif"
+                      alt="yogasite-result"
+                      class="each-project-gif"
+                    />
+                  </a>
+                  <div class="des-container-right">
+                    <h4 class="project-title">디자인 시안 3 마크업</h4>
+                    <div class="each-project-description">
+                      <span
+                        >Agata Bielen Site Mark Up Porject. From an image
+                        template to a resposive web site.</span
+                      >
+                    </div>
+                    <span class="each-project-tag">Mark up</span>
+                    <div class="each-project-stacks">
+                      <span>HTML</span>
+                      <span>CSS</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- when & where -->
+                <div class="project-each" data-type="Active-web">
+                  <a
+                    href="http://unnatural-legs.surge.sh/"
+                    class="image-container-left"
+                    target="blank"
+                  >
+                    <img
+                      src="imgs/webproject1.PNG"
+                      alt="design1-result"
+                      class="each-project-img"
+                    />
+                    <img
+                      src="videos/My Weather for Travel App - Chrome 2021-07-03 21-31-10.gif"
+                      alt="yogasite-result"
+                      class="each-project-gif"
+                    />
+                  </a>
+                  <div class="des-container-right">
+                    <h4 class="project-title">
+                      반응형 웹사이트 with JS / When & Where?
+                    </h4>
+                    <div class="each-project-description">
+                      <span
+                        >세계 여행에 필요한 월별 기후를 알려주는 Web site</span
+                      >
+                    </div>
+                    <span class="each-project-tag">Active Web</span>
+                    <div class="each-project-stacks">
+                      <span>HTML</span>
+                      <span>CSS</span>
+                      <span>Vanila JS</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- react app -->
+                <div class="project-each" data-type="React-web">
+                  <a href="" class="image-container-left" target="blank">
+                    <img src="imgs/user1.png" alt="" class="each-project-img" />
+                    <img
+                      src="videos/Yoga Site - Chrome 2021-09-20 13-24-20.gif"
+                      alt="yogasite-result"
+                      class="each-project-gif"
+                    />
+                  </a>
+                  <div class="des-container-right">
+                    <h4 class="project-title">React Web App</h4>
+                    <div class="each-project-description">
+                      <span>clone coding with java and android3</span>
+                    </div>
+                    <span class="each-project-tag">React-web-app</span>
+                    <div class="each-project-stacks">
+                      <span>React</span>
+                      <span>Express</span>
+                      <span>Mongoose</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <a href="https://github.com/JISU-Y" target="blank">
-          <i class="fab fa-github-square"></i>
-        </a>
-        <a href="https://www.rocketpunch.com/@jisu129" target="blank">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <p class="contact__rights">2021 JISU - All rights reserved</p>
-      </div>
-    </section>
+      </section>
+      <!-- Contact -->
+      <section id="contact" class="section contact">
+        <div class="wrap">
+          <h1>Contact</h1>
+          <div class="contact-container">
+            <div class="contact-info">
+              <div class="info-wrap">
+                <h3>Info.</h3>
+                <div class="info email">
+                  <i class="far fa-envelope icon"></i>
+                  <a href="#">jisu129@gmail.com</a>
+                </div>
+                <div class="info mobile">
+                  <i class="fas fa-mobile-alt icon"></i>
+                  <p>010-6490-6210</p>
+                </div>
+                <div class="info kktalk">
+                  <span
+                    class="iconify icon"
+                    data-icon="vs-kakaotalk"
+                    data-inline="false"
+                  ></span>
+                  <p>JISUY</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 라인 추가 -->
+      <section class="section contact-links">
+        <div class="wrap">
+          <div class="contact-image-container">
+            <img src="icons/bermuda-252.png" alt="house" class="house1" />
+            <img src="icons/pablo-smart-house.png" alt="house" class="house2" />
+            <img
+              src="icons/bermuda-veterinary-clinic.png"
+              alt="house"
+              class="house3"
+            />
+            <img src="icons/hugo-171.png" alt="card" class="building" />
+          </div>
+          <a href="https://github.com/JISU-Y" target="blank">
+            <i class="fab fa-github-square"></i>
+          </a>
+          <a href="https://www.rocketpunch.com/@jisu129" target="blank">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <p class="contact__rights">2021 JISU - All rights reserved</p>
+        </div>
+      </section>
+    </div>
     <!-- Arrow up -->
     <button class="arrow-up">
       <!-- <i class="fas fa-arrow-up"></i> -->
@@ -460,6 +467,8 @@
       <img src="icons/bermuda-372.png" alt="" class="flame" />
     </button>
     <script src="https://unpkg.com/scrollreveal"></script>
+    <script type="text/javascript" src="javascript.fullPage.js"></script>
+
     <script src="script.js"></script>
   </body>
 </html>

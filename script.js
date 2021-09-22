@@ -363,3 +363,8 @@ homeInfo.addEventListener("animationend", () => {
 });
 
 // full page scroll
+new fullpage("#fullpage", {
+  //options here
+  autoScrolling: true,
+  scrollHorizontally: true,
+});
