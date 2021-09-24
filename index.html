@@ -15,6 +15,12 @@
     <!-- full page scroll -->
     <link rel="stylesheet" type="text/css" href="javascript.fullPage.css" />
     <script type="text/javascript" src="javascript.fullPage.js"></script>
+    <!-- swiper js -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
   </head>
   <body>
     <div id="fullpage">
@@ -234,13 +240,14 @@
               </button>
             </div>
             <!-- 항목에 따른 projects 리스트들 -->
-            <div class="project-list">
-              <div class="projects-list-wrap">
+            <div class="project-list swiper">
+              <div class="projects-list-wrap swiper-wrapper">
                 <!-- mark up 1 -->
-                <div class="project-each" data-type="Mark-up">
+                <div class="project-each swiper-slide" data-type="Mark-up">
+                  <h4 class="each-project-title">디자인 시안 1 마크업</h4>
                   <a
                     href="https://jisu-y.github.io/Yoga-web-site/"
-                    class="image-container-left"
+                    class="image-link"
                     target="blank"
                   >
                     <img
@@ -248,13 +255,13 @@
                       alt="yogasite-result"
                       class="each-project-img"
                     />
-                    <img
+                    <!-- <img
                       src="videos/Yoga Site - Chrome 2021-09-20 13-24-20.gif"
                       alt="yogasite-result"
                       class="each-project-gif"
-                    />
+                    /> -->
                   </a>
-                  <div class="des-container-right">
+                  <!-- <div class="des-container-right">
                     <h4 class="each-project-title">디자인 시안 1 마크업</h4>
                     <div class="each-project-description">
                       <span
@@ -267,13 +274,14 @@
                       <span>HTML</span>
                       <span>CSS</span>
                     </div>
-                  </div>
+                  </div> -->
                 </div>
                 <!-- mark up 2 -->
-                <div class="project-each" data-type="Mark-up">
+                <div class="project-each swiper-slide" data-type="Mark-up">
+                  <h4 class="each-project-title">디자인 시안 2 마크업</h4>
                   <a
                     href="https://jisu-y.github.io/Snow_website/"
-                    class="image-container-left"
+                    class="image-link"
                     target="blank"
                   >
                     <img
@@ -281,13 +289,13 @@
                       alt="design1-result"
                       class="each-project-img"
                     />
-                    <img
+                    <!-- <img
                       src="videos/Snow website - Chrome 2021-09-20 13-49-34.gif"
                       alt="yogasite-result"
                       class="each-project-gif"
-                    />
+                    /> -->
                   </a>
-                  <div class="des-container-right">
+                  <!-- <div class="des-container-right">
                     <h4 class="project-title">디자인 시안 2 마크업</h4>
                     <div class="each-project-description">
                       <span
@@ -300,13 +308,14 @@
                       <span>HTML</span>
                       <span>CSS</span>
                     </div>
-                  </div>
+                  </div> -->
                 </div>
                 <!-- mark up 3 -->
-                <div class="project-each" data-type="Mark-up">
+                <div class="project-each swiper-slide" data-type="Mark-up">
+                  <h4 class="each-project-title">디자인 시안 3 마크업</h4>
                   <a
                     href="https://jisu-y.github.io/AgataBielen-web-site/"
-                    class="image-container-left"
+                    class="image-link"
                     target="blank"
                   >
                     <img
@@ -314,13 +323,13 @@
                       alt="Agata-result_small"
                       class="each-project-img"
                     />
-                    <img
+                    <!-- <img
                       src="videos/Agata Bielen - Chrome 2021-09-20 13-50-59.gif"
                       alt="yogasite-result"
                       class="each-project-gif"
-                    />
+                    /> -->
                   </a>
-                  <div class="des-container-right">
+                  <!-- <div class="des-container-right">
                     <h4 class="project-title">디자인 시안 3 마크업</h4>
                     <div class="each-project-description">
                       <span
@@ -333,13 +342,14 @@
                       <span>HTML</span>
                       <span>CSS</span>
                     </div>
-                  </div>
+                  </div> -->
                 </div>
                 <!-- when & where -->
-                <div class="project-each" data-type="Active-web">
+                <div class="project-each swiper-slide" data-type="Active-web">
+                  <h4 class="each-project-title">반응형 웹사이트</h4>
                   <a
                     href="http://unnatural-legs.surge.sh/"
-                    class="image-container-left"
+                    class="image-link"
                     target="blank"
                   >
                     <img
@@ -347,13 +357,13 @@
                       alt="design1-result"
                       class="each-project-img"
                     />
-                    <img
+                    <!-- <img
                       src="videos/My Weather for Travel App - Chrome 2021-07-03 21-31-10.gif"
                       alt="yogasite-result"
                       class="each-project-gif"
-                    />
+                    /> -->
                   </a>
-                  <div class="des-container-right">
+                  <!-- <div class="des-container-right">
                     <h4 class="project-title">
                       반응형 웹사이트 with JS / When & Where?
                     </h4>
@@ -368,19 +378,20 @@
                       <span>CSS</span>
                       <span>Vanila JS</span>
                     </div>
-                  </div>
+                  </div> -->
                 </div>
                 <!-- react app -->
-                <div class="project-each" data-type="React-web">
-                  <a href="" class="image-container-left" target="blank">
+                <div class="project-each swiper-slide" data-type="React-web">
+                  <h4 class="each-project-title">React Web App</h4>
+                  <a href="" class="image-link" target="blank">
                     <img src="imgs/user1.png" alt="" class="each-project-img" />
-                    <img
+                    <!-- <img
                       src="videos/Yoga Site - Chrome 2021-09-20 13-24-20.gif"
                       alt="yogasite-result"
                       class="each-project-gif"
-                    />
+                    /> -->
                   </a>
-                  <div class="des-container-right">
+                  <!-- <div class="des-container-right">
                     <h4 class="project-title">React Web App</h4>
                     <div class="each-project-description">
                       <span>clone coding with java and android3</span>
@@ -391,9 +402,11 @@
                       <span>Express</span>
                       <span>Mongoose</span>
                     </div>
-                  </div>
+                  </div> -->
                 </div>
               </div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
             </div>
           </div>
         </div>

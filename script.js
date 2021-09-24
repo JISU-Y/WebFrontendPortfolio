@@ -44,6 +44,22 @@ const projectBtnContainer = document.querySelector(".project-categories");
 const projectListContainer = document.querySelector(".project-list");
 const projectsListWrapContainer = document.querySelector(".projects-list-wrap");
 const projectResults = document.querySelectorAll(".project-each");
+// project swiper
+let swiper = new Swiper(".swiper", {
+  // Optional parameters
+  direction: "horizontal",
+  loop: true,
+  slidesPerView: 3,
+  spaceBetween: 30,
+  debugger: true,
+  centeredSlides: true,
+
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
 
 projectBtnContainer.addEventListener("click", (e) => {
   const filter = e.target.dataset.filter;
@@ -84,6 +100,37 @@ projectBtnContainer.addEventListener("click", (e) => {
       result.classList.add("invisible");
     }
   });
+
+  if (filter === "Mark-up") {
+    swiper.destroy();
+    swiper = new Swiper(".swiper", {
+      // Optional parameters
+      direction: "horizontal",
+      loop: false,
+      slidesPerView: 3,
+      spaceBetween: 30,
+    });
+  } else if (filter === "Active-web") {
+    swiper.destroy();
+    swiper = new Swiper(".swiper", {
+      // Optional parameters
+      direction: "horizontal",
+      loop: false,
+      slidesPerView: 3,
+      spaceBetween: 30,
+      centeredSlides: true,
+    });
+  } else if (filter === "React-web") {
+    swiper.destroy();
+    swiper = new Swiper(".swiper", {
+      // Optional parameters
+      direction: "horizontal",
+      loop: false,
+      slidesPerView: 3,
+      spaceBetween: 30,
+      centeredSlides: true,
+    });
+  }
 });
 
 // previewProject 넘기기
@@ -311,7 +358,7 @@ function draw() {
 resize();
 draw();
 
-while (boxes.length < 14) {
+while (boxes.length < 20) {
   boxes.push(new Box());
 }
 
