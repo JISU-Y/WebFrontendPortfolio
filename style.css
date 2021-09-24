@@ -600,6 +600,7 @@ body {
 .section.projects {
   width: 100%;
   background-color: #e9e1e1;
+  position: relative;
 }
 
 .projects .wrap {
@@ -738,25 +739,74 @@ body {
   transition: 0.5s ease;
 }
 
-.project-each .image-link .each-project-gif {
-  width: 130px;
-  height: 170px;
-  transition: 0.5s ease;
+.project-list .projects-list-wrap .project-each.invisible {
+  display: none;
 }
 
-.project-each .des-container-right {
+.project-list .projects-list-wrap .project-each.anim-out {
+  opacity: 0;
+}
+
+/* Modal Projects */
+.section.projects .modal {
+  position: fixed;
+  top: 0;
+  left: 0;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  margin: 0 20px 0 30px;
-  max-width: 500px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  z-index: 200;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.section.projects .modal .modal-contents {
+  width: 1000px;
+  height: 500px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.modal .modal-contents .modal-project-left {
+  width: 35%;
+  height: 100%;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.modal-contents .modal-project-left .modal-project-gif {
+  width: 320px;
+  height: 480px;
+}
+
+.modal-contents .modal-divide {
+  width: 1.5px;
+  height: 80%;
+  background-color: #000;
+  margin: 0 20px;
+}
+
+.modal .modal-contents .modal-project-right {
+  width: 65%;
+  height: 100%;
   position: relative;
 }
 
-.project-each .des-container-right .each-project-tag {
-  position: absolute;
-  top: 0;
-  right: 0;
+.modal-contents .modal-project-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: relative;
+}
+
+.modal-contents .modal-project-right .modal-project-tag {
+  width: 100px;
   font-size: 15px;
   padding: 5px 10px;
   background-color: #333;
@@ -764,26 +814,32 @@ body {
   border-radius: 5px;
 }
 
-.project-each .des-container-right .each-project-stacks {
+.modal-contents .modal-project-right .modal-project-stacks {
   display: flex;
   flex-wrap: wrap;
 }
-.project-each .des-container-right .each-project-stacks span {
+
+.modal-contents .modal-project-right .modal-project-stacks span {
   font-size: 17px;
   padding: 5px 15px;
-  background-color: #fff;
-  color: #333;
+  background-color: #333;
+  color: #fff;
   border-radius: 30px;
   margin-top: 10px;
   margin-right: 10px;
 }
 
-.project-list .projects-list-wrap .project-each.invisible {
-  display: none;
+.modal .modal-contents .modal-project-right .closeModal {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
 }
 
-.project-list .projects-list-wrap .project-each.anim-out {
-  opacity: 0;
+.section.projects .modal.hidden {
+  display: none;
 }
 
 /* Contact */
