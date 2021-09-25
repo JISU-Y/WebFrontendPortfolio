@@ -8,6 +8,19 @@ window.addEventListener("DOMContentLoaded", function () {
   home_lines.forEach((line) => (line.style.width = "400px"));
 });
 
+// full page scroll
+// new fullpage("#fullpage", {
+//   //options here
+//   autoScrolling: true,
+//   scrollHorizontally: true,
+// });
+fullpage.initialize("#fullpage", {
+  anchors: ["firstPage", "secondPage", "3rdPage", "4thpage", "lastPage"],
+  menu: "#menu",
+  css3: false,
+  scrollBar: true,
+});
+
 // preview에서 선택하는대로 해당 section으로 스크롤 이동
 previews.forEach((preview) => {
   preview.addEventListener("click", (event) => {
@@ -44,15 +57,15 @@ const projectBtnContainer = document.querySelector(".project-categories");
 const projectListContainer = document.querySelector(".project-list");
 const projectsListWrapContainer = document.querySelector(".projects-list-wrap");
 const projectResults = document.querySelectorAll(".project-each");
+const projectModals = document.querySelectorAll(".modal");
+const modalCloseBtns = document.querySelectorAll(".closeModal");
 // project swiper
 let swiper = new Swiper(".swiper", {
   // Optional parameters
   direction: "horizontal",
-  loop: true,
   slidesPerView: 3,
   spaceBetween: 30,
   debugger: true,
-  centeredSlides: true,
 
   // Navigation arrows
   navigation: {
@@ -100,13 +113,26 @@ projectBtnContainer.addEventListener("click", (e) => {
       result.classList.add("invisible");
     }
   });
-
-  if (filter === "Mark-up") {
+  if (filter === "*") {
     swiper.destroy();
     swiper = new Swiper(".swiper", {
       // Optional parameters
       direction: "horizontal",
-      loop: false,
+      slidesPerView: 3,
+      spaceBetween: 30,
+      debugger: true,
+
+      // Navigation arrows
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  } else if (filter === "Mark-up") {
+    swiper.destroy();
+    swiper = new Swiper(".swiper", {
+      // Optional parameters
+      direction: "horizontal",
       slidesPerView: 3,
       spaceBetween: 30,
     });
@@ -115,7 +141,6 @@ projectBtnContainer.addEventListener("click", (e) => {
     swiper = new Swiper(".swiper", {
       // Optional parameters
       direction: "horizontal",
-      loop: false,
       slidesPerView: 3,
       spaceBetween: 30,
       centeredSlides: true,
@@ -125,12 +150,41 @@ projectBtnContainer.addEventListener("click", (e) => {
     swiper = new Swiper(".swiper", {
       // Optional parameters
       direction: "horizontal",
-      loop: false,
       slidesPerView: 3,
       spaceBetween: 30,
       centeredSlides: true,
     });
   }
+});
+
+// modal open
+projectResults.forEach((result) => {
+  // click하면 modal 열리도록
+  result.addEventListener("click", (e) => {
+    projectModals.forEach((modal) => {
+      if (modal.classList[1] === e.target.classList[1]) {
+        modal.classList.remove("hidden");
+        fullpage.setAutoScrolling(false);
+        fullpage.setKeyboardScrolling(false);
+      } else {
+        modal.classList.add("hidden");
+      }
+    });
+  });
+});
+
+modalCloseBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    projectModals.forEach((modal) => {
+      modal.classList.add("hidden");
+      fullpage.initialize("#fullpage", {
+        anchors: ["firstPage", "secondPage", "3rdPage", "4thpage", "lastPage"],
+        menu: "#menu",
+        css3: false,
+        scrollBar: true,
+      });
+    });
+  });
 });
 
 // previewProject 넘기기
@@ -407,17 +461,4 @@ homeInfo.addEventListener("animationend", () => {
   `;
   homeInfo.style.backgroundColor = `#5cd3ad`;
   homeInfo.style.color = `#fff`;
-});
-
-// full page scroll
-// new fullpage("#fullpage", {
-//   //options here
-//   autoScrolling: true,
-//   scrollHorizontally: true,
-// });
-fullpage.initialize("#fullpage", {
-  anchors: ["firstPage", "secondPage", "3rdPage", "4thpage", "lastPage"],
-  menu: "#menu",
-  css3: false,
-  scrollBar: true,
 });
