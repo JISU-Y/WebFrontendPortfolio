@@ -1,25 +1,41 @@
-const previews = document.querySelectorAll(".preview");
-const previewSkill = document.querySelector(".preview-skills");
-const previewProject = document.querySelector(".preview-projects");
-const previewContact = document.querySelector(".preview-contacts");
+const homeInfo = document.querySelector(".home-info");
+const helloSign = document.querySelector(".hello");
 
-const home_lines = document.querySelectorAll(".home-wrap .line");
-window.addEventListener("DOMContentLoaded", function () {
-  home_lines.forEach((line) => (line.style.width = "400px"));
+homeInfo.addEventListener("animationstart", () => {
+  helloSign.style.display = "none";
+});
+
+homeInfo.addEventListener("animationend", () => {
+  homeInfo.innerHTML = `
+  <h1>YOO JISU</h1>
+  <div class="line"></div>
+  <h3>
+    안녕하세요.
+    <br />
+    <br />
+    프론트엔드 신입 개발자 <span>유지수</span>입니다.
+  </h3>
+  <div class="line"></div>
+  `;
+  homeInfo.style.backgroundColor = `#5cd3ad`;
+  homeInfo.style.color = `#fff`;
 });
 
 // full page scroll
-// new fullpage("#fullpage", {
-//   //options here
-//   autoScrolling: true,
-//   scrollHorizontally: true,
-// });
 fullpage.initialize("#fullpage", {
   anchors: ["firstPage", "secondPage", "3rdPage", "4thpage", "lastPage"],
   menu: "#menu",
   css3: false,
   scrollBar: true,
+  navigation: true,
+  navigationTooltips: ["Intro", "Summary", "Skills", "Projects", "Contacts"],
+  slidesNavigation: true,
 });
+
+const previews = document.querySelectorAll(".preview");
+const previewSkill = document.querySelector(".preview-skills");
+const previewProject = document.querySelector(".preview-projects");
+const previewContact = document.querySelector(".preview-contacts");
 
 // preview에서 선택하는대로 해당 section으로 스크롤 이동
 previews.forEach((preview) => {
@@ -164,8 +180,6 @@ projectResults.forEach((result) => {
     projectModals.forEach((modal) => {
       if (modal.classList[1] === e.target.classList[1]) {
         modal.classList.remove("hidden");
-        fullpage.setAutoScrolling(false);
-        fullpage.setKeyboardScrolling(false);
       } else {
         modal.classList.add("hidden");
       }
@@ -439,29 +453,6 @@ function collisionDetection(b) {
     }
   }
 }
-
-const homeInfo = document.querySelector(".home-info");
-const helloSign = document.querySelector(".hello");
-
-homeInfo.addEventListener("animationstart", () => {
-  helloSign.style.display = "none";
-});
-
-homeInfo.addEventListener("animationend", () => {
-  homeInfo.innerHTML = `
-  <h1>YOO JISU</h1>
-  <div class="line"></div>
-  <h3>
-    안녕하세요.
-    <br />
-    <br />
-    프론트엔드 신입 개발자 유지수입니다.
-  </h3>
-  <div class="line"></div>
-  `;
-  homeInfo.style.backgroundColor = `#5cd3ad`;
-  homeInfo.style.color = `#fff`;
-});
 
 // contact info copy
 const contactInfos = document.querySelectorAll(".info");

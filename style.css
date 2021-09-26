@@ -39,13 +39,6 @@ body {
   margin-bottom: 30px;
 }
 
-.line {
-  height: 2px;
-  width: 100px;
-  background-color: #fff;
-  margin: 10px 0;
-}
-
 .section.home-wrap {
   width: 100%;
   height: 100vh;
@@ -81,7 +74,19 @@ body {
 }
 
 .home-info h1 {
-  font-size: 50px;
+  font-size: 60px;
+}
+
+.home-info h3 span {
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.home-wrap .home-info .line {
+  height: 2px;
+  width: 270px;
+  background-color: #fff;
+  margin: 10px 0;
 }
 
 .home-info .hello {
@@ -93,7 +98,7 @@ body {
 /* max-height 추가해서 너무 작아지면 내용 없애버리기 */
 .section.main {
   width: 100%;
-  background-color: #e9e1e1;
+  background-color: #f8f8f8;
 }
 
 .main .wrap {
@@ -101,7 +106,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #e9e1e1;
+  background-color: #f8f8f8;
 }
 
 .main h1 {
@@ -123,11 +128,23 @@ body {
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
 }
 
+.main-container .cover-letter,
+.main-container .previews {
+  width: 100%;
+  font-size: 17px;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin-bottom: 3px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
 .main .main-container .details {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
+  height: 100%;
   margin: 30px 0;
 }
 
@@ -152,7 +169,7 @@ body {
 .main-container .details .details-description-wrap {
   width: 100%;
   position: relative;
-  margin: 0 30px;
+  margin: 0 45px;
 }
 
 .details .details-description-wrap .my-description {
@@ -190,7 +207,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 80%;
+  height: 100%;
   min-height: 170px;
   max-height: 280px;
   margin-bottom: 3px;
@@ -200,8 +217,8 @@ body {
 .main-container .preview .preview-projects,
 .main-container .preview .preview-contacts {
   /* background-color: #c0fefca9 dbe6fd 9fbfff deedf0; */
-  background-color: #deedf0;
-  border: 1.5px solid #0d98ba;
+  background-color: #dbe6fd;
+  /* border: 1.5px solid #0d98ba; */
   color: #333;
   font-weight: bold;
   border-radius: 2px;
@@ -216,6 +233,12 @@ body {
   position: relative;
   overflow: hidden;
 }
+/* .main-container .preview .preview-projects {
+  background-color: #e6616b;
+}
+.main-container .preview .preview-contacts {
+  background-color: #5cd3ad;
+} */
 
 .main-container .preview .preview-skills:hover,
 .main-container .preview .preview-projects:hover,
@@ -642,7 +665,7 @@ body {
 /* Projects */
 .section.projects {
   width: 100%;
-  background-color: #e9e1e1;
+  background-color: #f8f8f8;
   position: relative;
 }
 
@@ -651,7 +674,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  background-color: #e9e1e1;
+  background-color: #f8f8f8;
 }
 
 .projects-container {
@@ -704,7 +727,7 @@ body {
 /* 포스트잇 네모 */
 .category-btn.selected::after,
 .category-btn:hover:after {
-  content: "4";
+  content: "5";
   position: absolute;
   top: -20px;
   right: 20px;
@@ -731,7 +754,7 @@ body {
 
 .category-btn.mark-up.selected::after,
 .category-btn.mark-up:hover:after {
-  content: "2";
+  content: "3";
 }
 
 .category-btn.active-web.selected::after,
@@ -773,12 +796,23 @@ body {
   padding: 10px 0;
   margin-top: 30px;
   margin-right: 30px;
+  cursor: pointer;
+}
+.project-list .projects-list-wrap .project-each.Active-web1 {
+  background-color: #e6616b;
+}
+.project-list .projects-list-wrap .project-each.React-web1 {
+  background-color: #5cd3ad;
+}
+
+.project-each .image-link,
+.project-each .each-project-title {
+  pointer-events: none;
 }
 
 .project-each .image-link .each-project-img {
   width: 130px;
   height: 170px;
-  cursor: pointer;
   transition: 0.5s ease;
 }
 
@@ -817,6 +851,12 @@ body {
   background-color: #f5c156;
   border-radius: 10px;
   border: 3px solid midnightblue;
+}
+.section.projects .modal.Active-web1 .modal-contents {
+  background-color: #e6616b;
+}
+.section.projects .modal.React-web1 .modal-contents {
+  background-color: #5cd3ad;
 }
 
 .modal .modal-contents .modal-project-left {
@@ -876,7 +916,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  line-height: 80px;
+  line-height: 50px;
   word-break: keep-all;
 }
 
@@ -886,7 +926,7 @@ body {
 }
 
 .modal-contents .modal-project-right .modal-project-stacks span {
-  font-size: 17px;
+  font-size: 14px;
   padding: 5px 15px;
   background-color: #333;
   color: #fff;
@@ -905,8 +945,9 @@ body {
   border: none;
   background-color: #fff;
   box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.3);
-  color: #f5c156;
+  color: #000;
   font-size: 17px;
+  font-weight: bold;
   line-height: 25px;
 }
 
@@ -920,7 +961,7 @@ body {
   color: #fff;
   width: 100%;
   flex-direction: column;
-  z-index: 101;
+  z-index: unset;
 }
 
 .section.contact .wrap {
@@ -953,17 +994,6 @@ body {
   min-width: 400px;
   min-height: 210px;
 }
-
-/* .contact-info h3 {
-  width: 50px;
-  height: 50px;
-  background-color: #e6616b;
-  line-height: 50px;
-  text-align: center;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-  font-size: 15px;
-} */
 
 .contact-info .info {
   width: 100%;
@@ -1027,7 +1057,6 @@ body {
   background-color: #5cd3ad;
   position: relative;
 }
-
 .contact-info .info.email a.copied::after,
 .contact-info .info.mobile p.copied::after,
 .contact-info .kktalk p.copied::after {
@@ -1094,9 +1123,6 @@ body {
   height: 50px;
   border: none;
   background-color: transparent;
-  /* scroll 되었을 때만 보이게 
-  그런데 display none을 하게되면 transition을 적용할 수 없다.
-  그래서 여기서는 opactity를 0으로 해주자*/
   opacity: 0;
   transition: opacity 0.3s ease-in;
   pointer-events: none;
