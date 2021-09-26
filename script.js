@@ -82,6 +82,7 @@ let swiper = new Swiper(".swiper", {
   slidesPerView: 3,
   spaceBetween: 30,
   debugger: true,
+  centeredSlides: true,
 
   // Navigation arrows
   navigation: {
@@ -89,6 +90,8 @@ let swiper = new Swiper(".swiper", {
     prevEl: ".swiper-button-prev",
   },
 });
+
+const previewsP = document.querySelector(".previews");
 
 // media query in javascript
 function myFunction(x) {
@@ -101,6 +104,7 @@ function myFunction(x) {
       slidesPerView: 2,
       spaceBetween: 30,
       debugger: true,
+      centeredSlides: true,
 
       // Navigation arrows
       navigation: {
@@ -108,6 +112,8 @@ function myFunction(x) {
         prevEl: ".swiper-button-prev",
       },
     });
+    // main-container previews
+    previewsP.innerHTML = "Go To";
   } else {
     swiper.destroy();
     swiper = new Swiper(".swiper", {
@@ -116,6 +122,7 @@ function myFunction(x) {
       slidesPerView: 3,
       spaceBetween: 30,
       debugger: true,
+      centeredSlides: true,
 
       // Navigation arrows
       navigation: {
@@ -123,6 +130,7 @@ function myFunction(x) {
         prevEl: ".swiper-button-prev",
       },
     });
+    previewsP.innerHTML = "PREVIEWS";
   }
 }
 let x = window.matchMedia("(max-width: 800px)");
@@ -164,52 +172,60 @@ projectBtnContainer.addEventListener("click", (e) => {
   projectResults.forEach((result) => {
     if (filter === "*" || filter === result.dataset.type) {
       result.classList.remove("invisible");
+      result.classList.add("swiper-slide");
+      console.log(result);
     } else {
       result.classList.add("invisible");
+      result.classList.remove("swiper-slide");
+      console.log(result);
     }
   });
-  if (filter === "*") {
-    swiper.destroy();
-    swiper = new Swiper(".swiper", {
-      // Optional parameters
-      direction: "horizontal",
-      slidesPerView: 3,
-      spaceBetween: 30,
-      debugger: true,
 
-      // Navigation arrows
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
-  } else if (filter === "Mark-up") {
-    swiper.destroy();
-    swiper = new Swiper(".swiper", {
-      // Optional parameters
-      direction: "horizontal",
-      slidesPerView: 3,
-      spaceBetween: 30,
-    });
-  } else if (filter === "Active-web") {
-    swiper.destroy();
-    swiper = new Swiper(".swiper", {
-      // Optional parameters
-      direction: "horizontal",
-      slidesPerView: 3,
-      spaceBetween: 30,
-      centeredSlides: true,
-    });
-  } else if (filter === "React-web") {
-    swiper.destroy();
-    swiper = new Swiper(".swiper", {
-      // Optional parameters
-      direction: "horizontal",
-      slidesPerView: 3,
-      spaceBetween: 30,
-      centeredSlides: true,
-    });
-  }
+  x.addEventListener("change", () => myFunction(x)); // Attach listener function on state changes
+
+  // if (filter === "*") {
+  //   swiper.destroy();
+
+  //   swiper = new Swiper(".swiper", {
+  //     // Optional parameters
+  //     direction: "horizontal",
+  //     slidesPerView: 3,
+  //     spaceBetween: 30,
+  //     debugger: true,
+
+  //     // Navigation arrows
+  //     navigation: {
+  //       nextEl: ".swiper-button-next",
+  //       prevEl: ".swiper-button-prev",
+  //     },
+  //   });
+  // } else if (filter === "Mark-up") {
+  //   swiper.destroy();
+  //   swiper = new Swiper(".swiper", {
+  //     // Optional parameters
+  //     direction: "horizontal",
+  //     slidesPerView: 3,
+  //     spaceBetween: 30,
+  //   });
+  // } else if (filter === "Active-web") {
+  //   swiper.destroy();
+  //   swiper = new Swiper(".swiper", {
+  //     // Optional parameters
+  //     direction: "horizontal",
+  //     slidesPerView: 3,
+  //     spaceBetween: 30,
+  //     centeredSlides: true,
+  //   });
+  // } else if (filter === "React-web") {
+  //   swiper.destroy();
+  //   swiper = new Swiper(".swiper", {
+  //     // Optional parameters
+  //     direction: "horizontal",
+  //     slidesPerView: 3,
+  //     spaceBetween: 30,
+  //     centeredSlides: true,
+  //   });
+  // }
 });
 
 // modal open
@@ -271,24 +287,6 @@ function changeImage() {
     -idx * (100 / pre_projects.length)
   }%)`; // 100%에서 preject의 개수만큼 나누어서 X를 옮긴다.
 }
-
-// Show 'arrow-up' button when scrolling down
-const arrowUp = document.querySelector(".arrow-up");
-const flame = document.querySelector(".flame");
-document.addEventListener("scroll", () => {
-  if (window.scrollY > window.innerHeight) {
-    // window.innerHeight -> viewport 만큼
-    arrowUp.classList.add("visible");
-  } else {
-    arrowUp.classList.remove("visible");
-  }
-  // flame.style.opacity = "0";
-  // setTimeout((flame.style.opacity = "1"), 30000);
-});
-arrowUp.addEventListener("click", () => {
-  // scrollIntoView("#home");
-  scrollIntoView("#main");
-});
 
 // scroll reveal
 ScrollReveal({ reset: true });
