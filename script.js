@@ -462,3 +462,31 @@ homeInfo.addEventListener("animationend", () => {
   homeInfo.style.backgroundColor = `#5cd3ad`;
   homeInfo.style.color = `#fff`;
 });
+
+// contact info copy
+const contactInfos = document.querySelectorAll(".info");
+
+contactInfos.forEach((info) => {
+  info.addEventListener("click", () => {
+    const textArea = document.createElement("textarea");
+    textArea.style.display = "none";
+    textArea.textContent = info.children[1].innerText;
+    console.log(textArea);
+    document.body.append(textArea);
+
+    textArea.select();
+    textArea.setSelectionRange(0, 99999); /* For mobile devices */
+
+    /* Copy the text inside the text field */
+    navigator.clipboard.writeText(textArea.value);
+
+    textArea.remove();
+    // .info style 변경
+    info.children[0].style.pointerEvents = "none";
+    info.children[1].classList.add("copied");
+    setTimeout(() => {
+      info.children[0].style.pointerEvents = "unset";
+      info.children[1].classList.remove("copied");
+    }, 1000);
+  });
+});

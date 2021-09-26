@@ -808,8 +808,8 @@ body {
 }
 
 .section.projects .modal .modal-contents {
-  width: 1000px;
-  height: 500px;
+  width: 1100px;
+  height: 540px;
   position: absolute;
   display: flex;
   justify-content: center;
@@ -836,7 +836,7 @@ body {
   width: 3px;
   height: 85%;
   background-color: midnightblue;
-  margin: 0 20px;
+  margin: 0 40px;
   border-radius: 1.5px;
 }
 
@@ -876,6 +876,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  line-height: 80px;
+  word-break: keep-all;
 }
 
 .modal-contents .modal-project-right .modal-project-stacks {
@@ -952,7 +954,7 @@ body {
   min-height: 210px;
 }
 
-.contact-info h3 {
+/* .contact-info h3 {
   width: 50px;
   height: 50px;
   background-color: #e6616b;
@@ -961,7 +963,7 @@ body {
   text-transform: uppercase;
   margin-bottom: 20px;
   font-size: 15px;
-}
+} */
 
 .contact-info .info {
   width: 100%;
@@ -981,12 +983,29 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #e6616b;
+  position: relative;
+}
+.contact-info .info span:hover::after {
+  content: "copy!";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .contact-info .info i,
 .contact-info .info .icon {
   width: 30px;
   text-align: center;
+  pointer-events: none;
 }
 
 .contact-info .info .kktalk {
@@ -1006,6 +1025,26 @@ body {
   text-align: center;
   line-height: 50px;
   background-color: #5cd3ad;
+  position: relative;
+}
+
+.contact-info .info.email a.copied::after,
+.contact-info .info.mobile p.copied::after,
+.contact-info .kktalk p.copied::after {
+  content: "copied!";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  letter-spacing: 2px;
 }
 
 .contact-container .contact-visits {
