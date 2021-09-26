@@ -90,6 +90,45 @@ let swiper = new Swiper(".swiper", {
   },
 });
 
+// media query in javascript
+function myFunction(x) {
+  if (x.matches) {
+    // If media query matches
+    swiper.destroy();
+    swiper = new Swiper(".swiper", {
+      // Optional parameters
+      direction: "horizontal",
+      slidesPerView: 2,
+      spaceBetween: 30,
+      debugger: true,
+
+      // Navigation arrows
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  } else {
+    swiper.destroy();
+    swiper = new Swiper(".swiper", {
+      // Optional parameters
+      direction: "horizontal",
+      slidesPerView: 3,
+      spaceBetween: 30,
+      debugger: true,
+
+      // Navigation arrows
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  }
+}
+let x = window.matchMedia("(max-width: 800px)");
+myFunction(x); // Call listener function at run time
+x.addEventListener("change", () => myFunction(x)); // Attach listener function on state changes
+
 projectBtnContainer.addEventListener("click", (e) => {
   const filter = e.target.dataset.filter;
 
