@@ -27,9 +27,8 @@ fullpage.initialize("#fullpage", {
   menu: "#menu",
   css3: false,
   scrollBar: true,
-  navigation: true,
+  navigation: false,
   navigationTooltips: ["Intro", "Summary", "Skills", "Projects", "Contacts"],
-  slidesNavigation: true,
 });
 
 const previews = document.querySelectorAll(".preview");
@@ -173,59 +172,34 @@ projectBtnContainer.addEventListener("click", (e) => {
     if (filter === "*" || filter === result.dataset.type) {
       result.classList.remove("invisible");
       result.classList.add("swiper-slide");
+      swiper.destroy();
       console.log(result);
     } else {
       result.classList.add("invisible");
       result.classList.remove("swiper-slide");
       console.log(result);
+      swiper.destroy();
+    }
+
+    if (filter === "*" || filter === "Mark-up") {
+      swiper.destroy();
+      swiper = new Swiper(".swiper", {
+        // Optional parameters
+        direction: "horizontal",
+        slidesPerView: 3,
+        spaceBetween: 30,
+        debugger: true,
+        centeredSlides: true,
+
+        // Navigation arrows
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+      myFunction(x);
     }
   });
-
-  x.addEventListener("change", () => myFunction(x)); // Attach listener function on state changes
-
-  // if (filter === "*") {
-  //   swiper.destroy();
-
-  //   swiper = new Swiper(".swiper", {
-  //     // Optional parameters
-  //     direction: "horizontal",
-  //     slidesPerView: 3,
-  //     spaceBetween: 30,
-  //     debugger: true,
-
-  //     // Navigation arrows
-  //     navigation: {
-  //       nextEl: ".swiper-button-next",
-  //       prevEl: ".swiper-button-prev",
-  //     },
-  //   });
-  // } else if (filter === "Mark-up") {
-  //   swiper.destroy();
-  //   swiper = new Swiper(".swiper", {
-  //     // Optional parameters
-  //     direction: "horizontal",
-  //     slidesPerView: 3,
-  //     spaceBetween: 30,
-  //   });
-  // } else if (filter === "Active-web") {
-  //   swiper.destroy();
-  //   swiper = new Swiper(".swiper", {
-  //     // Optional parameters
-  //     direction: "horizontal",
-  //     slidesPerView: 3,
-  //     spaceBetween: 30,
-  //     centeredSlides: true,
-  //   });
-  // } else if (filter === "React-web") {
-  //   swiper.destroy();
-  //   swiper = new Swiper(".swiper", {
-  //     // Optional parameters
-  //     direction: "horizontal",
-  //     slidesPerView: 3,
-  //     spaceBetween: 30,
-  //     centeredSlides: true,
-  //   });
-  // }
 });
 
 // modal open
