@@ -74,6 +74,7 @@ const projectsListWrapContainer = document.querySelector(".projects-list-wrap");
 const projectResults = document.querySelectorAll(".project-each");
 const projectModals = document.querySelectorAll(".modal");
 const modalCloseBtns = document.querySelectorAll(".closeModal");
+
 // project swiper
 let swiper = new Swiper(".swiper", {
   // Optional parameters
@@ -198,6 +199,9 @@ projectBtnContainer.addEventListener("click", (e) => {
         },
       });
       myFunction(x);
+    } else {
+      // 하나 있을 때는 cetner에 몰아넣기
+      projectsListWrapContainer.style.justifyContent = "center";
     }
   });
 });
