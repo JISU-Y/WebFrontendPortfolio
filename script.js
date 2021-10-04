@@ -266,6 +266,20 @@ function changeImage() {
   }%)`; // 100%에서 preject의 개수만큼 나누어서 X를 옮긴다.
 }
 
+// modal description next
+const modalDescription = document.querySelector(".modal-project-description");
+const modalDesWrap = document.querySelector(".description-wrap");
+const modalDesSpan = document.querySelector(".modal-project-description span");
+const modalDesNext = document.querySelector(".description-next");
+
+modalDesNext.addEventListener("click", () => {
+  nextDescription(); // 토글로 바꾸기
+});
+
+function nextDescription() {
+  modalDesWrap.style.transform = `translateX(-50%)`; // 100%에서 preject의 개수만큼 나누어서 X를 옮긴다.
+}
+
 // scroll reveal
 ScrollReveal({ reset: true });
 

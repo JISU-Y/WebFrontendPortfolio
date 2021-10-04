@@ -36,7 +36,7 @@
         <div class="wrap">
           <h1 class="slide-right">SUMMARY</h1>
           <div class="main-container slide-left">
-            <p class="cover-letter">cover letter</p>
+            <p class="cover-letter">인사말</p>
             <div class="details">
               <!-- <div class="details-wrap">
                 <img src="imgs/Profile.jpg" alt="profileImage" />
@@ -53,14 +53,18 @@
                   <span>안녕하세요, 신입 프론트엔드 개발자 유지수입니다.</span>
                   <br />
                   <br />
-                  전자공학도로서 프로젝트를 진행해보며 만든 결과물에 뿌듯함과
-                  성취감을 느껴왔습니다.<br />
-                  하지만 HW 부품없이 내가 원하는 것을 만들 수는 없을까?<br />
-                  라는 질문에서부터 시작하여 웹 프론트엔드를 공부하며 나아가고
-                  있습니다.<br /><br />
-                  개발자로 성장함에 있어 꾸준함을 무기로 성장해 나가겠습니다.
+                  <strong>CODE IF YOU WANT TO NOD</strong><br />
+                  새로운 기술을 배울 때 작은 프로젝트라도 제 손으로 코딩해야
+                  이해하는 개발자입니다!<br /><br />
+
+                  이 포트폴리오에서는 제가 진행했던 프로젝트를 포함하고
+                  있습니다!<br />
+                  프로젝트를 계속해서 발전시키며 저 또한 발전하는 개발자가
+                  되겠습니다(이모티콘)
                 </p>
-                <button class="btn-resume">이력서 다운</button>
+                <a href="files/이력서_유지수.docx" download="resume_유지수">
+                  <button class="btn-resume">이력서 다운</button>
+                </a>
               </div>
             </div>
             <p class="previews">previews</p>
@@ -89,12 +93,12 @@
                 <span class="this">Projects</span>
                 <div class="image-container">
                   <div class="each-image">
-                    <strong>MarkUp</strong>
-                    <img src="imgs/yogaSiteMarkup.jpg" alt="yoga-site" />
+                    <strong>React</strong>
+                    <img src="imgs/PostItApp.JPG" alt="reactproject1" />
                   </div>
                   <div class="each-image">
-                    <strong>MarkUp</strong>
-                    <img src="imgs/snowSiteMarkup3.JPG" alt="snow-site" />
+                    <strong>Active Web</strong>
+                    <img src="imgs/webproject1.PNG" alt="webproject1" />
                   </div>
                   <div class="each-image">
                     <strong>MarkUp</strong>
@@ -104,12 +108,12 @@
                     />
                   </div>
                   <div class="each-image">
-                    <strong>Active Web</strong>
-                    <img src="imgs/webproject1.PNG" alt="webproject1" />
+                    <strong>MarkUp</strong>
+                    <img src="imgs/snowSiteMarkup3.JPG" alt="snow-site" />
                   </div>
                   <div class="each-image">
-                    <strong>React</strong>
-                    <img src="imgs/PostItApp.JPG" alt="reactproject1" />
+                    <strong>MarkUp</strong>
+                    <img src="imgs/yogaSiteMarkup.jpg" alt="yoga-site" />
                   </div>
                 </div>
                 <div class="buttons-container">
@@ -135,7 +139,7 @@
                 <div class="contents">
                   <span>010-6490-6210</span>
                   <span>jisu129@gmail.com</span>
-                  <span>JISUY</span>
+                  <span>JISU-Y</span>
                 </div>
               </div>
             </div>
@@ -178,7 +182,7 @@
                 <div class="skill-card js">
                   <div class="flip-card-inner">
                     <div class="flip-card-front js">
-                      <i class="fab fa-js"></i>Vanila JS
+                      <i class="fab fa-js"></i>Vanilla JS
                     </div>
                     <div class="flip-card-back">
                       <p>
@@ -230,29 +234,57 @@
               <button class="category-btn all selected" data-filter="*">
                 All
               </button>
-              <button class="category-btn mark-up" data-filter="Mark-up">
-                Mark Up
+              <button class="category-btn react-web" data-filter="React-web">
+                React App
               </button>
               <button class="category-btn active-web" data-filter="Active-web">
                 Web Site
               </button>
-              <button class="category-btn react-web" data-filter="React-web">
-                React App
+              <button class="category-btn mark-up" data-filter="Mark-up">
+                Mark Up
               </button>
             </div>
             <!-- 항목에 따른 projects 리스트들 -->
             <div class="project-list swiper">
               <div class="projects-list-wrap swiper-wrapper">
+                <!-- react app -->
+                <div
+                  class="project-each React-web1 swiper-slide"
+                  data-type="React-web"
+                >
+                  <h4 class="each-project-title">Post It!</h4>
+                  <div class="image-link">
+                    <img
+                      src="imgs/PostItApp.JPG"
+                      alt=""
+                      class="each-project-img"
+                    />
+                  </div>
+                </div>
+                <!-- when & where -->
+                <div
+                  class="project-each Active-web1 swiper-slide"
+                  data-type="Active-web"
+                >
+                  <h4 class="each-project-title">When & Where</h4>
+                  <div class="image-link">
+                    <img
+                      src="imgs/webproject1.PNG"
+                      alt="design1-result"
+                      class="each-project-img"
+                    />
+                  </div>
+                </div>
                 <!-- mark up 1 -->
                 <div
-                  class="project-each mark-up1 swiper-slide"
+                  class="project-each mark-up3 swiper-slide"
                   data-type="Mark-up"
                 >
                   <h4 class="each-project-title">디자인 시안 1 마크업</h4>
                   <div class="image-link">
                     <img
-                      src="imgs/yogaSiteMarkup.jpg"
-                      alt="yogasite-result"
+                      src="imgs/AgataSiteMarkup_small.JPG"
+                      alt="Agata-result_small"
                       class="each-project-img"
                     />
                   </div>
@@ -273,42 +305,14 @@
                 </div>
                 <!-- mark up 3 -->
                 <div
-                  class="project-each mark-up3 swiper-slide"
+                  class="project-each mark-up1 swiper-slide"
                   data-type="Mark-up"
                 >
                   <h4 class="each-project-title">디자인 시안 3 마크업</h4>
                   <div class="image-link">
                     <img
-                      src="imgs/AgataSiteMarkup_small.JPG"
-                      alt="Agata-result_small"
-                      class="each-project-img"
-                    />
-                  </div>
-                </div>
-                <!-- when & where -->
-                <div
-                  class="project-each Active-web1 swiper-slide"
-                  data-type="Active-web"
-                >
-                  <h4 class="each-project-title">When & Where</h4>
-                  <div class="image-link">
-                    <img
-                      src="imgs/webproject1.PNG"
-                      alt="design1-result"
-                      class="each-project-img"
-                    />
-                  </div>
-                </div>
-                <!-- react app -->
-                <div
-                  class="project-each React-web1 swiper-slide"
-                  data-type="React-web"
-                >
-                  <h4 class="each-project-title">Post It!</h4>
-                  <div class="image-link">
-                    <img
-                      src="imgs/PostItApp.JPG"
-                      alt=""
+                      src="imgs/yogaSiteMarkup.jpg"
+                      alt="yogasite-result"
                       class="each-project-img"
                     />
                   </div>
@@ -319,7 +323,7 @@
             </div>
           </div>
         </div>
-        <!-- Mark up 1 modal -->
+        <!-- Mark up 3 modal -->
         <div class="modal mark-up1 hidden" data-type="Mark-up">
           <div class="modal-contents">
             <a
@@ -336,20 +340,30 @@
             <div class="modal-divide"></div>
             <div class="modal-project-right">
               <span class="modal-project-tag">Mark up</span>
-              <h4 class="modal-project-title">디자인 시안 마크업 1</h4>
+              <h4 class="modal-project-title">디자인 시안 마크업 3</h4>
               <div class="modal-project-description">
-                <span
-                  >Yoga Site Mark Up Porject. <br />
-                  From an image template to a resposive web site. <br />
-                  Yoga site를 PSD 시안에 따라 마크업<br />
-                  Media query를 적용하여 반응형으로 구성<br />
-                  Web Design 시안 출처: https://www.freepik.com/psd/
-                </span>
+                <div class="description-wrap">
+                  <span>
+                    Yoga Site Mark Up Porject. <br />
+                    From an image template to a resposive web site. <br />
+                    Yoga site를 PSD 시안에 따라 마크업<br />
+                    Media query를 적용하여 반응형으로 구성<br />
+                    Web Design 시안 출처: https://www.freepik.com/psd/
+                  </span>
+                  <span>
+                    두번째 장 <br />
+                    From an image template to a resposive web site. <br />
+                    Yoga site를 PSD 시안에 따라 마크업<br />
+                    Media query를 적용하여 반응형으로 구성<br />
+                    Web Design 시안 출처: https://www.freepik.com/psd/
+                  </span>
+                </div>
               </div>
               <div class="modal-project-stacks">
                 <span>HTML</span>
                 <span>CSS</span>
               </div>
+              <button class="description-next">next</button>
               <button class="closeModal">X</button>
             </div>
           </div>
@@ -391,7 +405,7 @@
             </div>
           </div>
         </div>
-        <!-- Mark up 3 modal -->
+        <!-- Mark up 1 modal -->
         <div class="modal mark-up3 hidden" data-type="Mark-up">
           <div class="modal-contents">
             <a
@@ -408,7 +422,7 @@
             <div class="modal-divide"></div>
             <div class="modal-project-right">
               <span class="modal-project-tag">Mark up</span>
-              <h4 class="modal-project-title">디자인 시안 마크업 3</h4>
+              <h4 class="modal-project-title">디자인 시안 마크업 1</h4>
               <div class="modal-project-description">
                 <span
                   >Agata Bielen Site Mark Up Porject.
@@ -448,20 +462,20 @@
               <h4 class="modal-project-title">when & where</h4>
               <div class="modal-project-description">
                 <span
-                  >웹 사이트 개인 프로젝트
+                  >Vanilla JS Web Site 개인 프로젝트
                   <br />
                   세계 여행에 필요한 나라별/월별 기후를 알려주는 Web Site<br />
                   worldbank - Climate Data API 사용<br />
                   검색창에 국가명(영어 기준)을 검색, 자동 추천 기능<br />
                   월을 선택하여 선택된 국가의 해당 월의 기후(평균 기온, 강수량,
                   일교차)를 그에 맞는 이미지와 함께 확인 가능<br />
-                  모든 기능은 plugin없이 vanila JS로 구현
+                  모든 기능은 plugin없이 vanilla JS로 구현
                 </span>
               </div>
               <div class="modal-project-stacks">
                 <span>HTML</span>
                 <span>CSS</span>
-                <span>Vanila JS</span>
+                <span>Vanilla JS</span>
               </div>
               <button class="closeModal">X</button>
             </div>
@@ -530,7 +544,7 @@
                     data-inline="false"
                   ></span
                 ></span>
-                <p>JISUY</p>
+                <p>JISU-Y</p>
               </div>
             </div>
             <div class="contact-visits">
