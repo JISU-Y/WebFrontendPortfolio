@@ -31,31 +31,28 @@ fullpage.initialize("#fullpage", {
   navigationTooltips: ["Intro", "Summary", "Skills", "Projects", "Contacts"],
 });
 
-const previews = document.querySelectorAll(".preview");
+const preview = document.querySelector(".preview");
 const previewSkill = document.querySelector(".preview-skills");
 const previewProject = document.querySelector(".preview-projects");
 const previewContact = document.querySelector(".preview-contacts");
 
-// preview에서 선택하는대로 해당 section으로 스크롤 이동
-previews.forEach((preview) => {
-  preview.addEventListener("click", (event) => {
-    let target = event.target;
-    if (
-      target.classList.contains("buttons-container") ||
-      target.classList.contains("this")
-    ) {
-      // project 일 때 는 button container로,
-      // media query 적용되었을 때는 span으로 인식한다.
-      target = event.target.parentNode;
-    }
-    const link = target.dataset.set;
-    console.log(target);
+preview.addEventListener("click", (event) => {
+  let target = event.target;
+  if (
+    target.classList.contains("buttons-container") ||
+    target.classList.contains("this")
+  ) {
+    // project 일 때 는 button container로,
+    // media query 적용되었을 때는 span으로 인식한다.
+    target = event.target.parentNode;
+  }
+  const link = target.dataset.set;
+  console.log(target);
 
-    if (link == null) {
-      return;
-    }
-    scrollIntoView(link);
-  });
+  if (link == null) {
+    return;
+  }
+  scrollIntoView(link);
 });
 
 function scrollIntoView(selector) {
@@ -66,6 +63,72 @@ function scrollIntoView(selector) {
   }
   scrollTo.scrollIntoView({ behavior: "smooth" });
 }
+
+// preview hover
+const previewGuide = document.querySelector(".preview-mouse");
+
+// skills
+previewSkill.addEventListener("mouseenter", (e) => {
+  const link = e.target.dataset.set.slice(1);
+  console.log(link);
+
+  previewGuide.style.opacity = 0.8;
+  previewGuide.innerHTML = `click to move to ${link}`;
+  previewSkill.addEventListener("mousemove", (e) => {
+    let rect = e.target.getBoundingClientRect();
+    let x = e.clientX - rect.left; //x position within the element.
+    let y = e.clientY - rect.top; //y position within the element.
+
+    previewGuide.style.left = x + 20 + "px";
+    previewGuide.style.top = y + 20 + "px";
+  });
+});
+previewSkill.addEventListener("mouseleave", (e) => {
+  previewGuide.style.opacity = 0;
+});
+// project
+previewProject.addEventListener("mouseenter", (e) => {
+  const link = e.target.dataset.set.slice(1);
+  console.log(link);
+
+  previewGuide.style.opacity = 0.8;
+  previewGuide.innerHTML = `click to move to ${link}`;
+  previewProject.addEventListener("mousemove", (e) => {
+    let target = e.target;
+    if (target.classList.contains("buttons-container")) {
+      target = e.target.parentNode;
+    }
+    let rect = target.getBoundingClientRect();
+    let x = e.clientX - rect.left / 2.5; //x position within the element. // 왜 2.5지 ㅠㅠ
+    // 왜 고대로 rect.left하면 안되는 거지
+    let y = e.clientY - rect.top; //y position within the element.
+
+    previewGuide.style.left = x + 20 + "px";
+    previewGuide.style.top = y + 20 + "px";
+  });
+});
+previewProject.addEventListener("mouseleave", (e) => {
+  previewGuide.style.opacity = 0;
+});
+// contacts
+previewContact.addEventListener("mouseenter", (e) => {
+  const link = e.target.dataset.set.slice(1);
+  console.log(link);
+
+  previewGuide.style.opacity = 0.8;
+  previewGuide.innerHTML = `click to move to ${link}`;
+  previewContact.addEventListener("mousemove", (e) => {
+    let rect = e.target.getBoundingClientRect();
+    let x = e.clientX - rect.left / 4; //x position within the element.
+    let y = e.clientY - rect.top; //y position within the element.
+
+    previewGuide.style.left = x + 20 + "px";
+    previewGuide.style.top = y + 20 + "px";
+  });
+});
+previewContact.addEventListener("mouseleave", (e) => {
+  previewGuide.style.opacity = 0;
+});
 
 // projects
 const projectBtnContainer = document.querySelector(".project-categories");
