@@ -270,15 +270,25 @@ function changeImage() {
 const modalDescription = document.querySelector(".modal-project-description");
 const modalDesWrap = document.querySelector(".description-wrap");
 const modalDesSpan = document.querySelector(".modal-project-description span");
-const modalDesNext = document.querySelector(".description-next");
+const modalDesNexts = document.querySelectorAll(".description-next");
 
-modalDesNext.addEventListener("click", () => {
-  nextDescription(); // 토글로 바꾸기
+modalDesNexts.forEach((next) => {
+  next.addEventListener("click", (e) => {
+    const desWrap = e.target.parentNode.querySelector(".description-wrap");
+    next.classList.toggle("next");
+    if (next.classList.contains("next")) {
+      // next description
+      desWrap.style.transform = `translateX(-50%)`;
+      next.classList.remove("fa-chevron-right");
+      next.classList.add("fa-chevron-left");
+    } else {
+      // prev description
+      desWrap.style.transform = `translateX(0)`;
+      next.classList.remove("fa-chevron-left");
+      next.classList.add("fa-chevron-right");
+    }
+  });
 });
-
-function nextDescription() {
-  modalDesWrap.style.transform = `translateX(-50%)`; // 100%에서 preject의 개수만큼 나누어서 X를 옮긴다.
-}
 
 // scroll reveal
 ScrollReveal({ reset: true });
