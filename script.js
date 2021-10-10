@@ -105,6 +105,11 @@ previewProject.addEventListener("mouseenter", (e) => {
 
     previewGuide.style.left = x + 20 + "px";
     previewGuide.style.top = y + 20 + "px";
+    if (e.target.id === "left" || e.target.id === "right") {
+      previewGuide.innerHTML = `see more projects`;
+    } else {
+      previewGuide.innerHTML = `click to move to ${link}`;
+    }
   });
 });
 previewProject.addEventListener("mouseleave", (e) => {
