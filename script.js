@@ -13,7 +13,7 @@ homeInfo.addEventListener("animationend", () => {
     안녕하세요.
     <br />
     <br />
-    프론트엔드 신입 개발자 <span>유지수</span>입니다.
+    프론트엔드 개발자 <span>유지수</span>입니다.
   </h3>
   <div class="line"></div>
   `;
