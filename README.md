@@ -1,2 +1,2 @@
-# WebFrontendPortfolio
- Junior Web Frontend Portfolio
+# Frontend developer portfolio
+[link] https://jisu-y.github.io/WebFrontendPortfolio/
